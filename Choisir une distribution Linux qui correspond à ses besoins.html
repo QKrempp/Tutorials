@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Choisir une distribution Linux qui correspond à ses besoins - CodiMD
+    </title>
+    <link rel="icon" type="image/png" href="https://markdown.data-ensta.fr/favicon.png">
+    <link rel="apple-touch-icon" href="https://markdown.data-ensta.fr/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css" integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.night .markdown-body blockquote{color:#bcbcbc}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.night .markdown-body h1,.night .markdown-body h2,.night .markdown-body h3,.night .markdown-body h4,.night .markdown-body h5,.night .markdown-body h6{color:#ddd}.markdown-body h1 .fa-link,.markdown-body h2 .fa-link,.markdown-body h3 .fa-link,.markdown-body h4 .fa-link,.markdown-body h5 .fa-link,.markdown-body h6 .fa-link{color:#000;vertical-align:middle;visibility:hidden;font-size:16px}.night .markdown-body h1 .fa-link,.night .markdown-body h2 .fa-link,.night .markdown-body h3 .fa-link,.night .markdown-body h4 .fa-link,.night .markdown-body h5 .fa-link,.night .markdown-body h6 .fa-link{color:#fff}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .fa-link,.markdown-body h2:hover .anchor .fa-link,.markdown-body h3:hover .anchor .fa-link,.markdown-body h4:hover .anchor .fa-link,.markdown-body h5:hover .anchor .fa-link,.markdown-body h6:hover .anchor .fa-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.night .markdown-body table tr{background-color:#5f5f5f}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.night .markdown-body table tr:nth-child(2n){background-color:#4f4f4f}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.night .markdown-body code,.night .markdown-body tt{color:#eee;background-color:hsla(0,0%,90.2%,.36)}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\A0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.night .markdown-body pre{filter:invert(100%)}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.night .markdown-body .gist table tr:nth-child(2n){background-color:#ddd}.markdown-body code[data-gist-id]{background:none;padding:0;filter:invert(100%)}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.geo,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.night .markdown-body pre.graphviz .graph>polygon{fill:#333}.night .markdown-body pre.mermaid .sectionTitle,.night .markdown-body pre.mermaid .titleText,.night .markdown-body pre.mermaid text{fill:#fff}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.night .markdown-body .abc path{fill:#eee}.night .markdown-body .abc path.note_selected{fill:##4DD0E1}.night tspan{fill:#fefefe}.night pre rect{fill:transparent}.night pre.flow-chart path,.night pre.flow-chart rect{stroke:#fff}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body img{background-color:transparent}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;-webkit-transition:opacity .2s;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.geo-map{width:100%;height:250px}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.9;background-color:#ccc;border:none}.ui-toc-label,.ui-toc .open .ui-toc-label{-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#5f5f5f}.ui-toc-label:focus{opacity:1;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.night .ui-toc-dropdown .nav>li>a:focus,.night .ui-toc-dropdown .nav>li>a:hover{color:#fff;border-left-color:#fff}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.night .ui-toc-dropdown .nav>.active:focus>a,.night .ui-toc-dropdown .nav>.active:hover>a,.night .ui-toc-dropdown .nav>.active>a{color:#fff;border-left:2px solid #fff}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.night .ui-toc-dropdown .nav>li>a{color:#aaa}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,"\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3",Osaka,Meiryo,"\30E1\30A4\30EA\30AA",MS Gothic,"\FF2D\FF33   \30B4\30B7\30C3\30AF",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,"\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF",sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,"\5FAE\8EDF\6B63\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,"\5FAE\8EDF\6B63\9ED1UI",sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,"\5FAE\8F6F\96C5\9ED1UI",sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:rgba(0,0,0,.85)}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}small span{line-height:22px}small .dropdown{display:inline-block}small .dropdown a:focus,small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}.night .navbar{background:#333;border-bottom-color:#333;color:#eee}.night .navbar a{color:#eee}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid"><style>
+#doc>div, #doc>p, #doc>ul {
+    text-align: justify;
+}
+</style><h1 id="Choisir-une-distribution-Linux-qui-correspond-à-ses-besoins"><a class="anchor hidden-xs" href="#Choisir-une-distribution-Linux-qui-correspond-à-ses-besoins" title="Choisir-une-distribution-Linux-qui-correspond-à-ses-besoins"><i class="fa fa-link"></i></a>Choisir une distribution Linux qui correspond à ses besoins</h1><h1 id="Introduction"><a class="anchor hidden-xs" href="#Introduction" title="Introduction"><i class="fa fa-link"></i></a>Introduction</h1><div class="alert alert-warning">
+<p><img class="emoji" alt=":warning:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/warning.png"> Toute cette petite introduction n’est que pour en apprendre un peu plus sur ce qu’est Linux et n’est absolument pas nécessaire pour lire <a href="#Les-environnements-de-bureau">la suite du tuto</a></p>
+</div><div class="alert alert-info">
+<p><img class="emoji" alt=":dark_sunglasses:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/dark_sunglasses.png"> De manière générale, si vous voulez aller encore plus vite et ne même pas lire ce tuto, <strong><a href="https://distrochooser.de/fr/" target="_blank" rel="noopener">ce site</a></strong> est fait pour vous!</p>
+</div><p>Le monde de Linux est immense, et nombreux sont ceux qui n’en ont plus jamais décroché après y avoir goûté. Il trouve ses racine dans les premiers pas des hackers du MIT des années 50 qui s’introduisaient la nuit dans les laboratoires de l’université pour y coder ce qui leur passait par la tête et non y faire tourner d’interminables autant qu’ennuyeuses simulations. Ce sont eux qui ont placé les bases de <strong><a href="https://fr.wikipedia.org/wiki/L'%C3%89thique_des_hackers" target="_blank" rel="noopener">L’éthique des hackers</a></strong> et de <strong>l’open source</strong>, c’est à dire une philosophie de l’informatique comme une fin en soi, ouverte à tous.</p><h2 id="Mais-dis-donc-Jamy-qu’est-ce-que-c’est-l’Open-Source"><a class="anchor hidden-xs" href="#Mais-dis-donc-Jamy-qu’est-ce-que-c’est-l’Open-Source" title="Mais-dis-donc-Jamy-qu’est-ce-que-c’est-l’Open-Source"><i class="fa fa-link"></i></a>Mais dis donc Jamy, qu’est-ce que c’est l’Open Source?</h2><p>L’open source, désigne les logiciels soumis à des licences qui stipulent que le code de ces derniers doit être accessible à tous. Il y en a de nombreuses différentes, comme la licence <strong>BSD</strong> qui autorise à ce que le code soit utilisé à des fins commerciales (Parmis les exemples célèbres, on trouve le kernel BSD qui est utilisé comme base notamment à <strong>MacOS</strong> et <strong>Playsation 4 system software</strong>, eh oui ces deux là partagent pas mal de choses!), mais la plus connue est la licence <strong>GPL</strong> qui stipule que toute modification du code source doit être elle aussi publiée sous licence GPL. C’est sous cette licence qu’est publié le kernel Linux, et ce qui fait que l’écosystème autour de celui-ci est si étendu.</p><h2 id="C’est-quoi-un-“kernel”"><a class="anchor hidden-xs" href="#C’est-quoi-un-“kernel”" title="C’est-quoi-un-“kernel”"><i class="fa fa-link"></i></a>C’est quoi un “kernel”?</h2><p>En fait, il se trouve que lorsque quelqu’un est <em>sous Linux</em>, il n’y a pas <strong>que</strong> Linux sur son ordinateur. Pour pouvoir utiliser son ordinateur normalement, il faut installer tout un ensemble de programmes auxquels Linux va servir de socle.</p><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: hierarchy Pages: 1 -->
+<svg width="510pt" height="260pt" viewBox="0.00 0.00 510.00 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>hierarchy</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 506,-256 506,4 -4,4"></polygon>
+<!-- Linux -->
+<g id="node1" class="node">
+<title>Linux</title>
+<polygon fill="none" stroke="#000000" points="313,-252 259,-252 259,-216 313,-216 313,-252"></polygon>
+<text text-anchor="middle" x="286" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Linux</text>
+</g>
+<!-- Xorg -->
+<g id="node2" class="node">
+<title>Xorg</title>
+<polygon fill="none" stroke="#000000" points="124,-180 70,-180 70,-144 124,-144 124,-180"></polygon>
+<text text-anchor="middle" x="97" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Xorg</text>
+</g>
+<!-- Linux&#45;&gt;Xorg -->
+<g id="edge1" class="edge">
+<title>Linux-&gt;Xorg</title>
+<path fill="none" stroke="#00ff00" d="M258.9209,-223.6842C225.9393,-211.1197 170.0956,-189.8459 133.3827,-175.8601"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="134.6197,-172.586 124.0289,-172.2967 132.1277,-179.1274 134.6197,-172.586"></polygon>
+</g>
+<!-- ls -->
+<g id="node3" class="node">
+<title>ls</title>
+<polygon fill="none" stroke="#000000" points="250,-180 196,-180 196,-144 250,-144 250,-180"></polygon>
+<text text-anchor="middle" x="223" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">ls</text>
+</g>
+<!-- Linux&#45;&gt;ls -->
+<g id="edge2" class="edge">
+<title>Linux-&gt;ls</title>
+<path fill="none" stroke="#00ff00" d="M270.1024,-215.8314C262.7722,-207.454 253.934,-197.3531 245.9031,-188.1749"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="248.3307,-185.6343 239.1116,-180.4133 243.0627,-190.2438 248.3307,-185.6343"></polygon>
+</g>
+<!-- cd -->
+<g id="node4" class="node">
+<title>cd</title>
+<polygon fill="none" stroke="#000000" points="376,-180 322,-180 322,-144 376,-144 376,-180"></polygon>
+<text text-anchor="middle" x="349" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">cd</text>
+</g>
+<!-- Linux&#45;&gt;cd -->
+<g id="edge3" class="edge">
+<title>Linux-&gt;cd</title>
+<path fill="none" stroke="#00ff00" d="M301.8976,-215.8314C309.2278,-207.454 318.066,-197.3531 326.0969,-188.1749"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="328.9373,-190.2438 332.8884,-180.4133 323.6693,-185.6343 328.9373,-190.2438"></polygon>
+</g>
+<!-- bash -->
+<g id="node5" class="node">
+<title>bash</title>
+<polygon fill="none" stroke="#000000" points="502,-180 448,-180 448,-144 502,-144 502,-180"></polygon>
+<text text-anchor="middle" x="475" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">bash</text>
+</g>
+<!-- Linux&#45;&gt;bash -->
+<g id="edge4" class="edge">
+<title>Linux-&gt;bash</title>
+<path fill="none" stroke="#00ff00" d="M313.0791,-223.6842C346.0607,-211.1197 401.9044,-189.8459 438.6173,-175.8601"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="439.8723,-179.1274 447.9711,-172.2967 437.3803,-172.586 439.8723,-179.1274"></polygon>
+</g>
+<!-- sddm -->
+<g id="node6" class="node">
+<title>sddm</title>
+<polygon fill="none" stroke="#000000" points="54,-108 0,-108 0,-72 54,-72 54,-108"></polygon>
+<text text-anchor="middle" x="27" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">sddm</text>
+</g>
+<!-- Xorg&#45;&gt;sddm -->
+<g id="edge5" class="edge">
+<title>Xorg-&gt;sddm</title>
+<path fill="none" stroke="#00ff00" d="M79.336,-143.8314C71.0268,-135.2848 60.9736,-124.9443 51.9082,-115.6198"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="54.3821,-113.1435 44.9018,-108.4133 49.3631,-118.023 54.3821,-113.1435"></polygon>
+</g>
+<!-- kdeplasma -->
+<g id="node7" class="node">
+<title>kdeplasma</title>
+<polygon fill="none" stroke="#000000" points="209.6808,-108 126.3192,-108 126.3192,-72 209.6808,-72 209.6808,-108"></polygon>
+<text text-anchor="middle" x="168" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">kdeplasma</text>
+</g>
+<!-- Xorg&#45;&gt;kdeplasma -->
+<g id="edge6" class="edge">
+<title>Xorg-&gt;kdeplasma</title>
+<path fill="none" stroke="#00ff00" d="M114.9163,-143.8314C123.3442,-135.2848 133.541,-124.9443 142.736,-115.6198"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="145.3131,-117.9912 149.8425,-108.4133 140.3289,-113.0761 145.3131,-117.9912"></polygon>
+</g>
+<!-- Konsole -->
+<g id="node8" class="node">
+<title>Konsole</title>
+<polygon fill="none" stroke="#000000" points="201.075,-36 134.925,-36 134.925,0 201.075,0 201.075,-36"></polygon>
+<text text-anchor="middle" x="168" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Konsole</text>
+</g>
+<!-- kdeplasma&#45;&gt;Konsole -->
+<g id="edge7" class="edge">
+<title>kdeplasma-&gt;Konsole</title>
+<path fill="none" stroke="#00ff00" d="M168,-71.8314C168,-64.131 168,-54.9743 168,-46.4166"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="171.5001,-46.4132 168,-36.4133 164.5001,-46.4133 171.5001,-46.4132"></polygon>
+</g>
+</g>
+</svg>
+</pre><p>Par exemple un programme pour afficher des choses à l’écran (eh oui, Linux ne sait pas faire ça tout seul!) comme <strong><a href="http://X.org" target="_blank" rel="noopener">X.org</a></strong> ou <strong>Wayland</strong>, un programme pour gérer les fenêtres, les faires passer de l’arrière plan au premier plan et inversement, etc. Et le côté merveilleux de tout ça, c’est que comme la plupart de ces programmes sont open source, chacun est libre de le modifier à se guise pour y créer une alternative. En fait, chaque programme a souvent des dizaines d’alternatives. Et les ensembles cohérents de programmes sont appelés des <strong>distribution</strong>, dont Linux n’est que la base, le noyau, d’où le terme de <strong>kernel</strong>.</p><h2 id="Il-y-a-beaucoup-de-distributions"><a class="anchor hidden-xs" href="#Il-y-a-beaucoup-de-distributions" title="Il-y-a-beaucoup-de-distributions"><i class="fa fa-link"></i></a>Il y a beaucoup de distributions?</h2><p>Oui. Vraiment. Parce que tout le monde peut faire sa distribution avec un peu de motivation.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_d418abdb71b86ad92b9b228789892f35.png" alt=""></p><p>Alors comment tirer son épingle du jeu dans tout ça? Vous tombez bien, c’est ce dont on va parler ici! On va se concentrer sur les plus connues, que je vais essayer de vous présenter succintement.</p><hr><h1 id="Les-environnements-de-bureau"><a class="anchor hidden-xs" href="#Les-environnements-de-bureau" title="Les-environnements-de-bureau"><i class="fa fa-link"></i></a>Les environnements de bureau</h1><p>Avant de se lancer dans le choix à proprement parler, il <strong>faut</strong> évoquer rapidement les environnements de bureau (ou <em>DE</em>, pour <em>Desktop Environment</em>).</p><p>Un environnement de bureau, c’est le programme qui va gérer <em>en très très gros</em> le look global de votre environnement de travail. Il y en a des dizaines, certains plus personnalisables que d’autres, certains plus coûteux en ressources que d’autres. Comme les distributions viennent généralement avec plusieurs environnements de bureau différents, qu’on appelle des <em>flavours</em>, à choisir au moment de télécharger l’ISO. Il est donc important de savoir un peu de quoi on parle avant.</p><div class="alert alert-success">
+<p>Il ne faut cependant pas oublier que sous Linux, <strong>tout est 100 % personnalisable</strong>, que les options de chaque DE sont nombreuses, et que dans l’absolu, si quelque chose vous manque, vous pourrez toujours ajouter un plugin ou aller trafiquer 3 lignes de code vous même. L’apparence des DE n’est donc jamais fixe, et si chaque distribution vient avec son propre thème, vous pouvez <strong>toujours</strong> le personnaliser. Les images que vous verrez dans cette secton sont des exemples de thèmes très poussés extraits de <strong><a href="https://www.reddit.com/r/unixporn/" target="_blank" rel="noopener">cette page</a></strong>, où vous pourrez constater tout ce qui est faisable avec les différents DE.</p>
+</div><h2 id="Les-environnements-“riches”"><a class="anchor hidden-xs" href="#Les-environnements-“riches”" title="Les-environnements-“riches”"><i class="fa fa-link"></i></a>Les environnements “riches”</h2><p>Certains environnements proposent des fonctionnalités multiples, débordent d’animations, et peuvent rapidement peser lourd sur la RAM des petites config. En contrepartie, il y a tout le confort, et certains tiennent presque plus de la distribution complète que de l’environnement de bureau. Les exemples les plus notables sont:</p><hr><h3 id="GNOME"><a class="anchor hidden-xs" href="#GNOME" title="GNOME"><i class="fa fa-link"></i></a>GNOME</h3><p>C’est la <em>flavour</em> par défaut d’Ubuntu. Le projet GNOME est l’un de ceux avec les partis pris les plus forts, ce qui lui donne une vraie personnalité. En revanche, il demandera un petit temps d’adaptation pour apprendre les bonnes pratiques (par exemple, l’impossibilité de créer des raccourcis sur le bureau peut être perturbant). Le système d’ajout d’extensions par navigateur est assez contre intuitif au premier abord, mais quand on s’y est fait, c’est l’un des points forts de l’environnement. Il est assez facile à naviguer, en revanche, étant un des DE lourds, il vient souvent avec distributions chargées de plein de logiciels dont on aura pas nécessairement l’utilité, et qu’il sera difficile de faire disparaître du menu d’accueil si on le souhaite!<br>
+En résumé, c’est un DE riche qui offre une expérience polie, mais qui demandera un certain temps d’adaptation et quelques compromis.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_30e6e7b5243278ea4ba211e516d6ce26.png" alt=""></p><p><em>Credit: u/Mykol225</em></p><hr><h3 id="KDE"><a class="anchor hidden-xs" href="#KDE" title="KDE"><i class="fa fa-link"></i></a>KDE</h3><p>C’est un DE qui emprunte beaucoup aux paradigmes de Windows. Un utilisateur de ce dernier s’y retrouvera facilement. En plus d’un environnement familier, KDE fonctionne avec des widgets qui permettent d’enrichir l’expérience de l’utilisateur, comme une horloge, des capteurs de performances système et autre. KDE est un DE qui vise avant tout la personnalisation. dans tout les paramètres d’apparence, il est proposé de télécharger des alternatives. Mais il faut cependant s’y prendre avec modération, parce qu’on se retrouve facilement avec un bureau qui ne ressemble plus à rien à force de rajouter et modifier les composants graphiques.<br>
+Il a l’avantage d’ailleurs d’être plutôt “léger parmis les lourds”, car l’équipe du projet KDE s’efforce de le modérer dans son utilisation de RAM.<br>
+En résumé, si vous voulez une expérience qui s’approche du bureau Windows, mais 100% personnalisable, vous êtes au bon endroit.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_c8f9841fa27f30c9b9761555f4fb1427.png" alt=""></p><p><em>Credit: u/BeerBellyPete</em></p><hr><h3 id="Cinnamon"><a class="anchor hidden-xs" href="#Cinnamon" title="Cinnamon"><i class="fa fa-link"></i></a>Cinnamon</h3><p>C’est un DE qui a été créé spécialement pour <strong>Linux Mint</strong>, mais qui est devenu si populaire qu’il a été porté sur de nombreuses distributions. Moins personnalisable que <strong>KDE</strong>, il vient avec un thème sobre et efficace, qui emprunte là aussi aux paradigmes de Windows. C’est un dérivé (mais très très dérivé) de GNOME, donc les applications compatibles avec l’un sont compatibles avec l’autre notamment au niveau des thèmes (là où des applications designées pour KDE feraient tache par exemple)<br>
+Si vous venez de Windows et que vous voulez un coup de frais sans être dépaysé, Cinnamon est pour vous.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_714e00b96517eb41c0ffb9f2e3d7ae76.png" alt=""></p><p><em>Credit: u/chaNcharge</em></p><hr><div class="alert alert-info">
+<p>Il existe en fait 2 framework (c’est à dire des librairies qui vont gérer l’affichage des boutons, de la minimisation, maximisation ET l’intégration au thème global de la distribution, pour éviter d’avoir à réinventer la roue à chaque nouveau programme) principaux dans l’affichage de fenêtres sous Linux: <strong>GTK</strong> (porté notamment par GNOME) et <strong>Qt</strong> (porté notamment par KDE). S’il y a de nombreux efforts mis en place pour que l’intégration d’applis codées pour l’un se fasse bien sur l’autre, il faut garder en tête que ce ne sera évidemment pas parfait, surtout les applications Qt dans un DE qui utilise GTK</p>
+</div><h3 id="Budgie"><a class="anchor hidden-xs" href="#Budgie" title="Budgie"><i class="fa fa-link"></i></a>Budgie</h3><p>Créé de toute pièce pour le projet <strong>Solus</strong>, Budgie est un environnement de bureau qui a su tirer son épingle du jeu avec son apparence élégante et simple. On retiendra notamment son volet de notifications avec le calendrier qui permet de vérifier en un coup d’oeil ses rendez-vous de la journée et les derniers mails reçus. Pas particulièrement lourd, il ne se revendique cependant pas léger, d’où sa présence dans cette section.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_78723ec448632ec21108d85a0e10f892.png" alt=""></p><p><em>Credit: u/phandungtri</em></p><hr><div class="alert alert-info">
+<p>Les connaisseurs remarqueront que je n’ai pas parlé de <strong>Deepin DE</strong>. C’est parce qu’il me semble gourmand en performances pour pas grand chose, et qu’il n’apporte pas grand chose par rapport aux autres…</p>
+</div><h2 id="Les-environnements-légers"><a class="anchor hidden-xs" href="#Les-environnements-légers" title="Les-environnements-légers"><i class="fa fa-link"></i></a>Les environnements légers</h2><p>Si on peut tirer une expérience infiniment riche sur des grosses config, il ne faut pas oublier que Linux se vante d’être un système d’exploitation léger qui tourne même sur des grilles-pains. Il existe donc de nombreux DE plus légers les uns que les autres, qui pourraient permettre à la vieille bécane de mamie Jacqueline de servir à nouveau au moins pour du traitement de texte et de la bureautique, sans avoir à attendre 1h30 que Windows 95 et MS Word se lancent.</p><div class="alert alert-warning">
+<p>Marre des 20 Go de Windows 10? Il existe des distributions qui arrivent à proposer une interface graphique avec 12 Mo de RAM. <a href="http://www.tinycorelinux.net/" target="_blank" rel="noopener">Sisi</a>.</p>
+</div><p><img src="https://markdown.data-ensta.fr/uploads/upload_de3a705817e29290d96bfb9817d14150.png" alt="Oui oui, ça a été fait."></p><p>Si votre ordi n’est pas un foudre de guerre, mais que vous voulez installer Linux dessus, il est fait pour! Cependant, il vaudrait mieux privilégier l’un des DE suivants:</p><h3 id="XFCE"><a class="anchor hidden-xs" href="#XFCE" title="XFCE"><i class="fa fa-link"></i></a>XFCE</h3><p>On commence par celui-là, parce que c’est la star des DE légers. Il arrive à proposer des animations,de nombreuses personnalisations possibles, tout en étant bien plus léger que les mastodontes dont on a parlé plus haut.<br>
+En fait, il est si fonctionnel qu’il est le choix par défaut de nombreuses distributions, et l’une des <em>flavours</em> “légère” de beaucoup d’autres.<br>
+Si vous voulez avoir une expérience utilisateur complète sans pour autant peser trop sur votre RAM, XFCE est pour vous.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_a9c8468013842298c53998f30e3bfd9d.png" alt=""></p><p><em>Credit: u/VeryConciousWater</em></p><hr><h3 id="Mate"><a class="anchor hidden-xs" href="#Mate" title="Mate"><i class="fa fa-link"></i></a>Mate</h3><p>Avec un environnement qui n’est pas sans rappeler les années 2000, il ne faut pas sous estimer Mate qui arrive avec un set de personnalisations non négligeable. A peine plus lourd qu’XFCE, son set d’applications propres est simple et intuitif. L’économie de ressources est là et ça se sent, mais sans pour autant entacher l’expérience utilisateur qui reste fluide.<br>
+Si vous êtes un peu nostalgique de l’époque de Windows XP, et que vous cherchez un DE qui saura se faire discret pour ne pas perturber votre concentration par des options trop compliquées, vous avez frappé à la bonne porte.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_1cd204ae8be8ab80047aab923c2d7017.png" alt=""></p><p><em>Credit: u/LuvPastelPink</em></p><hr><h3 id="LXQt"><a class="anchor hidden-xs" href="#LXQt" title="LXQt"><i class="fa fa-link"></i></a>LXQt</h3><p>Là on arrive dans les DE vraiment très légers, pour les toutes petites config. Au revoir les animations, adieu les customisations multiples, bienvenue sur LXQt. Le tour de force de ce DE, est que chaque sacrifice au niveau de l’expérience utilisateur <em>visuelle</em> se traduit par un gain de performance solide. Et si vous n’êtes pas très portés sur la personnalisation, c’est pas très grave parce que LXQt arrive déjà tout bien codé pour avoir un look tout à fait acceptable.<br>
+Si la customisation c’est pas votre truc et que votre bécane est plus proche du ventilateur que du supercalculateur, lancez vous sur LXQt, vous verrez que Linux, ça tourne vraiment sur rien.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_6dfbdd75823e49d927e4b9cda451db8a.png" alt=""></p><p><em>Credit: u/yfph</em></p><hr><h2 id="Et-les-gestionnaires-de-fenêtre-dans-tout-ça"><a class="anchor hidden-xs" href="#Et-les-gestionnaires-de-fenêtre-dans-tout-ça" title="Et-les-gestionnaires-de-fenêtre-dans-tout-ça"><i class="fa fa-link"></i></a>Et les gestionnaires de fenêtre dans tout ça?</h2><p>Alors là on touche aux utilisateurs qui n’ont pas peur de se lancer des défis technique. Il se trouve que sur Linux, on est pas vraiement obligé d’avoir un DE pour l’utiliser, certains se contentent de gestionnaires de fenêtres (Ou Window Manager, raccourcis en WM). Ce sont des programmes fait pour être utilisés uniquement au clavier, et qui sont extrêmement légers faits pour privilégier la concentration et l’efficacité, le <em>workflow</em> quoi. En contrepartie demandent un certain temps d’apprentissage. Si vous êtes un <em>hardcore coder</em> et que vous voulez être toujours plus performant, je vous invite à vous renseigner par vous même (i3wm, openbox, icewm…), le choix est immense, mais je ne vais pas l’aborder ici.</p><h2 id="Si-je-viens-de-MacOS-comment-je-m’y-retrouve-dans-tout-ça"><a class="anchor hidden-xs" href="#Si-je-viens-de-MacOS-comment-je-m’y-retrouve-dans-tout-ça" title="Si-je-viens-de-MacOS-comment-je-m’y-retrouve-dans-tout-ça"><i class="fa fa-link"></i></a>Si je viens de MacOS, comment je m’y retrouve dans tout ça?</h2><p>Beaucoup de DE utilisent le paradigme de bureau de Windows, mais certains s’inspirent aussi de MacOS, comme Pantheon par exemple. Cependant si par “comment je m’y retrouve?”, vous entendez “elle est où ma barre de raccourcis en bas de l’écran?”, sachez qu’il existe le package <code>latte-dock</code> qui vous permet d’ajouter une <em>dock bar</em> facilement sur quasiment tout les DE et distributions.</p><div class="alert alert-info">
+<p><img class="emoji" alt=":hammer_and_wrench:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/hammer_and_wrench.png">  De manière générale, si vous souhaitez ajouter n’importe quoi, par exemple un composant graphique comme une barre de recherche sur votre bureau, cherchez un peu sur Google, il y aura forcément un package pour le faire</p>
+</div><h2 id="Pour-conclure-sur-les-DE"><a class="anchor hidden-xs" href="#Pour-conclure-sur-les-DE" title="Pour-conclure-sur-les-DE"><i class="fa fa-link"></i></a>Pour conclure sur les DE</h2><p>Vous l’aurez compris, l’apparence d’une distribution est plus liée au DE que vous choisissez d’utiliser qu’à la distribution en elle même. Sachez d’ailleurs que vous pouvez toujours changer de DE assez facilement une fois votre distribution installée. Cependant, il faudra avoir la patience de tout re-personnaliser pour retrouver une expérience cohérente. C’est faisable, mais je vous suggère de choisir le bon DE dès le début, ça vous fera gagner pas mal de temps.</p><h1 id="Bon-on-les-choisis-ces-distributions"><a class="anchor hidden-xs" href="#Bon-on-les-choisis-ces-distributions" title="Bon-on-les-choisis-ces-distributions"><i class="fa fa-link"></i></a>Bon, on les choisis ces distributions?</h1><p>Oui, oui, on y vient. Comme vous l’avez vu au dessus, il existe des centaines de distributions différentes. On va donc se concentrer sur les distributions “majeures”, et passer en revue leurs avantages et inconvénients. Sachez aussi que je vais essayer de me concentrer sur les distributions ayant un écosystème de logiciels cohérent suffisant pour ne pas risquer d’entacher  votre expérience utilisateur parce que vos logiciels favoris n’existent pas dessus (eh oui, j’aurais bien aimé parler de <em>Solus Project</em>, mais malheureusement c’est un peu trop niche…).</p><h2 id="Les-gestionnaires-de-paquets"><a class="anchor hidden-xs" href="#Les-gestionnaires-de-paquets" title="Les-gestionnaires-de-paquets"><i class="fa fa-link"></i></a>Les gestionnaires de paquets</h2><p>Promis, c’est la dernière appartée avant le choix des distros, mais il faut absolument l’évoquer. En effet, une distribution vient avec un ensemble de logiciel cohérent, mais elle ne va pas <strong>tout</strong> installer d’un coup sur votre ordi, ça serait idiot. C’est pourquoi toutes les distributions viennent avec ce qu’on appelle un gestionnaire de paquets (Package manager), qui va gérer tout les téléchargement et installation de logiciels, s’assurer que chaque petit nouveau est bien installé sur votre ordinateur avec tout les sous programmes nécessaires à son bon fonctionnement etc. En effet, le système de <em>logithèque</em>, qu’on retrouve aujourd’hui dans nos téléphones, que ça soit le Playstore ou l’Apple store, existe depuis les années 90 sur Linux. Ca permet à chaque distribution de ne proposer <strong>que</strong> des logiciels qui sont compatibles et certifiés sans failles de sécurité. Un package manager est donc l’épine dorsale d’une distro, et ne peut être changé. C’est pourquoi l’écosystème de logiciels disponible sur une distribution est intimement lié à son package manager, et que les distributions avec des packages managers un peu exotiques peinent à émerger. Ceci étant dit, choisissons notre distro.</p><h2 id="Les-distributions-“de-base”"><a class="anchor hidden-xs" href="#Les-distributions-“de-base”" title="Les-distributions-“de-base”"><i class="fa fa-link"></i></a>Les distributions “de base”</h2><p>Et par “de base”, je ne veux pas dire qu’elles soient basique, bien au contraire, mais plutôt qu’elles sont tellement travaillées et réussies que d’autres distributions ont décidé de se baser dessus pour créer les leurs. On va donc évoquer ici les distributions qui sont en quelque sorte le fondement de l’univers Linux.</p><h3 id="Ubuntu"><a class="anchor hidden-xs" href="#Ubuntu" title="Ubuntu"><i class="fa fa-link"></i></a>Ubuntu</h3><p>Commment ne pas commencer par celle-ci? J’aurais pu ne même pas la mettre dans cette section, puisqu’elle est elle même basée sur Debian, mais elle a tellement de succès que de nombreuses distro s’en sont servies comme d’un tremplin. C’est la distro du débutant par excellence, dès que vous avez un problème sur Linux, si la solution existe, elle existe pour Ubuntu. Elle est construite autour du package manager de Debian, comme tout ses dérivés, vous le connaissez sans doute si vous avez déjà fait une install Linux: <code>apt</code>.<br>
+La distribution fonctionne sur un cycle de mise à jour tout les deux ans, et entre ne sont appliquées que des mises à jours mineures et des patchs de sécurités. C’est probablement <strong>la</strong> distribution qui vient avec le plus de <em>flavors</em>. Tout les DE dont j’ai parlés précédemment sont proposés, et bien d’autres encore. Par défaut, sur le site d’Ubuntu vous trouverez l’ISO avec GNOME dessus, et pour trouver les autres <em>flavors</em>, il faudra généralement googler <em>première lettre du DE de votre choix</em> + “ubuntu” (par exemple “Kubuntu” pour KDE, “Xubuntu” pour XFCE etc).<br>
+Choisir Ubuntu, c’est choisir la stabilité, avec un catalogue de logiciels immense et des tutos partout.<br>
+Il faut cependant se méfier d’une chose: si vous êtes un bidouilleur qui va vouloir se tenir au courant des dernières sorties logicielles, vous allez potentiellement vouloir agandir votre logithèque en y ajoutant des <code>ppa</code>. C’est là que vos ennuis avec <code>apt</code> risquent de commencer: <code>apt</code> est fait pour fonctionner avec les logiciels de la version courante d’Ubuntu. Si les logiciels de vos <code>ppa</code> nécessitent d’autres versions, vous aller sombrer dans <strong>l’enfer des dépendances</strong>, où <code>apt</code> va se retrouver tout perdu et ne plus rien vouloir installer, et votre install sera cassée, bravo, bienvenue dans le monde du bidouillage Linux.<br>
+Ubuntu est donc la distribution de choix si vous souhaitez un usage bien sage et bien stable de Linux, pour lequel vous acceptez de rester dans le cadre qui vous est imposé. Parfait pour les débutants et les utilisateurs occasionnels, ou tout simplement ceux qui ne veulent pas se poser de questions à chaque démarrage de leur ordinateur.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_00294de1330b5acffbe1bd04834f9e05.png" alt=""></p><p><em>Ubuntu avec GNOME</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">Ubuntu</a></strong></p>
+</div><div class="alert alert-info">
+<p>Si vous cherchez à installer un logiciel qui n’est pas dans les dépôts officiels pour Ubuntu ou Debian, je vous suggère de commencer par vous renseigner sur <strong>Flatpak</strong> et <strong>Snapcraft</strong> avant d’ajouter des <code>ppa</code></p>
+</div><hr><h3 id="Debian"><a class="anchor hidden-xs" href="#Debian" title="Debian"><i class="fa fa-link"></i></a>Debian</h3><p>Pourquoi ne pas avoir commencé par Debian? C’est pourtant une distribution fondatrice, un mastodonte du logiciel libre, sur lequel même Ubuntu est basé! Eh bien c’est parce que Debian, plus qu’une distribution, c’est une philosophie de vie. Debian se targue de n’utiliser que des logiciels entièrement open source, et donc de refuser tout ce qui a été codé pour Linux mais ne diffuse pas ses sources. C’est une belle philosophie, et <a href="https://fr.wikipedia.org/wiki/Debian#Caract%C3%A9ristiques_de_la_philosophie_Debian" target="_blank" rel="noopener">Wikipédia</a> vous en parlera bien mieux que moi. Le résultat d’un parti pris aussi fort, cependant, c’est que beaucoup de logiciels vont nécessiter l’ajout de <code>ppa</code>, et croyez moi, vous préférez éviter au maximum. En revanche, une autre des facettes de Debian, c’est son focus sur la stabilité et son support <em>ad vitam eternam</em>. En effet, l’équipe de développement met un point d’honneur à ce que tout marche parfaitement bien, quitte à prendre un retard parfois énorme sur les mises à jour de logiciels.<br>
+Quasiment tout les DE sont disponibles sous Debian, une bonne partie de ceux cités ci-dessus peuvent être choisis <strong>lors de l’installation</strong> (et non au moment de télécharger l’ISO).<br>
+En bref, Debian c’est le choix de la stabilité éternelle, à condition de ne pas vouloir de logiciels trop nouveaux.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_d70f594dc90c4ea453bbd39884e38fc3.png" alt=""></p><p><em>Debian avec Cinnamon</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://www.debian.org/distrib/" target="_blank" rel="noopener">Debian</a></strong></p>
+</div><hr><h3 id="Arch-Linux"><a class="anchor hidden-xs" href="#Arch-Linux" title="Arch-Linux"><i class="fa fa-link"></i></a>Arch Linux</h3><p>Alors ça, c’est pas du tout une distribution de débutants. La convivialité ? Ils l’ont mangée, dommage. Cette distribution s’intalle manuellement, en ligne de commande, donc si vous n’avez jamais partitionné vos disques en <em>tty</em>, passez votre chemin. Mais pourquoi en parler alors? Parce que Arch Linux utilise comme gestionnaire de paquets <code>pacman</code>, et qu’elle fonctionne en rolling release, c’est à dire qu’il n’y a pas de version 1, 2 ou 3: tout vos logiciels sont mis à jours quotidiennement quasiment. Ça confère à Arch une force immense car vous pouvez utiliser ses programmes à la minute de leur sortie, mais c’est aussi sa faiblesse car parfois certains paquets peinent à suivre le rythme de mise à jour, finissent obsolète et votre distro se retrouve HS. Honnêtement, si vous avez réussi à installer Arch, ça va pas vous faire peur de passer quelque temps en console pour réparer tout ça, mais à la longue ça peut devenir usant.<br>
+Mais cette nature de distribution ‘de geek’ fait qu’il y a un wiki immense qui a réponse à toute vos questions sur Linux, et que si un de vos programmes favoris n’est pas encore dans les dépôts officiels, il sera forcément déjà dans un <code>AUR</code>, l’équivalent des <code>ppa</code> sous Arch, à la différence près que les paquets mis à jours continuellement vous évitent de tomber dans <strong>l’enfer des dépendances</strong>…<br>
+C’est donc une distribution à éviter pour les débutants, bien que les tutos soient si bien faits que n’importe qui pourrait réussir à l’installer avec un peu de patience et d’huile de coude.<br>
+En revanche, l’installer vous fera monter une grosse marche dans votre compréhension de Linux. Et vous pourrez alors dire le fameux “I use Arch btw”, qu’on voit fleurir sur les subreddits Linux.<br>
+Tout les DE sont disponibles sur Arch, par contre il vous faudra les installer a la main, et être prêt à les personnaliser à votre convenance, car ils seront dans leurs versions <em>vanilla</em>, c’est à dire sans personnalisation.<br>
+En bref, c’est une distribution de connaisseur,qui vous apprendra beaucoup sur Linux, et pour laquelle <strong>tous</strong> les logiciels Linux existants seront disponible, au prix d’un petit surplus de travail de temps en temps.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_e08f48f88c8795ef50efd2a0febade4c.png" alt=""></p><p><em>Arch Linux avec KDE</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://archlinux.org/download/" target="_blank" rel="noopener">Arch Linux</a></strong></p>
+</div><hr><h3 id="RHEL"><a class="anchor hidden-xs" href="#RHEL" title="RHEL"><i class="fa fa-link"></i></a>RHEL</h3><p>La dernière des ‘Grandes’, ce n’est pas vraiment une distribution que vous pourrez essayer, puisqu’elle est destinée aux entreprises. En revanche, beaucoup de distributions sont basées dessus. C’est une distribution conçue par la <strong>Red Hat Enterprise</strong>, qui propose une version facilement déployable sur de nombreuses machines simultanément, facilement mise à jour à grande échelle etc. Etant financée par une entreprise, entretenur par des développeurs à plein temps, qui ajoutent continuellement des fonctionnalités en fonction des besoins des entreprises. Les ajouts majeurs sont souvent portés plus tard aux autre distributions, ce qui fait que certains la considèrent comme une vitrine sur le futur du logiciel libre.<br>
+Elle est construite autour du gestionnaire de paquet <code>rpm</code> qui fonctionne de manière similaire à <code>apt</code>.<br>
+Ce n’est donc pas une distribution que vous pourrez tester directement, en revanche vous serez peut être amenés à travailler avec, et certaines distributions intéressanes sont basées dessus.</p><div class="alert alert-danger">
+<p><img class="emoji" alt=":cry:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/cry.png"> Eh non, elle ne se télécharge pas celle-là…</p>
+</div><h2 id="Les-distributions-“basées”"><a class="anchor hidden-xs" href="#Les-distributions-“basées”" title="Les-distributions-“basées”"><i class="fa fa-link"></i></a>Les distributions “basées”</h2><p>Ces distributions sont les grands noms basés sur celles que l’on a vu précédemment. Elles apportent chacunes leur lot de nouveautés, d’avantages et parfois d’inconvénients. L’intérêt étant que tout tutoriel fonctionnant sur la distribution sur laquelle elle est basée pourra être utilisé. Voici donc une liste non exhaustive des distributions les plus connues:</p><h3 id="Linux-Mint"><a class="anchor hidden-xs" href="#Linux-Mint" title="Linux-Mint"><i class="fa fa-link"></i></a>Linux Mint</h3><p>Il fallait commencer par celle-ci: elle est recommandée à tout les débutants passant à Linux et ne voulant pas être trop dépaysés. Elle vient avec un certain nombre de package de compatibilité avec des formats de donnée propriétaire. Traduction: vous pourrez ouvrir tout vos fichiers dessus. On la trouve sous trois versions principales: <strong>Cinnamon</strong>, <strong>Mate</strong> et <strong>XFCE</strong>. Vous pourrez donc choisir ce qui conviendra à votre config, chaque version étant lourdement personnalisée par l’équipe Linux Mint, pour offrir une expérience agréable et facile d’accès. Elle est basée sur Ubuntu, ce qui lui donne accès tout son écosystème.<br>
+On pourrait la réduire à une version d’Ubuntu spécialement conçue pour accueillir les nouveaux venus sur Linux, mais l’ensemble des logiciels pré-installés en font bien plus que ça: une expérience stable et agréable, un environnement de travail agréable et tout les logiciels dont vous aurez besoin.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_4508569dd7937fae05175ccfe9cb2719.png" alt=""></p><p><em>Linux Mint avec Cinnamon</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://linuxmint.com/download.php" target="_blank" rel="noopener">Linux Mint</a></strong></p>
+</div><hr><h3 id="Fedora"><a class="anchor hidden-xs" href="#Fedora" title="Fedora"><i class="fa fa-link"></i></a>Fedora</h3><p>Une valeur sûre: le choix de prédilection de <strong>Linus Thorvald</strong>, le créateur de Linux. Fedora est basée sur <strong>RHEL</strong>, mais mieux encore, elle est <em>upstream</em>, c’est à dire que c’est la distribution créée par <strong>Red Hat Enterprise</strong> pour tester ses innovations avant de les implémenter dans RHEL. En quelque sorte, en utilisant Fedora, vous devenez bêta-testeur pour Red Hat Enterprise, et en contrepartie vous avez accès en avant première aux innovations majeures qui seront implémentées dans un futur proche dans les autres distributions.<br>
+Mais RHEL étant une version pour entreprise, ils doivent pouvoir proposer une expérience à la fois stable <strong>ET</strong> à jour sur les sorties des différents logiciels. C’est donc une distribution idéale pour développeur, car les risques de plantage sont faibles, et les logiciels, framework et autres sont à jour avec un délai d’au plus 6 mois.<br>
+Fedora n’est disponible qu’avec <strong>GNOME</strong> officiellement, mais il est facile de trouver d’autres <em>flavours</em> supportées par la communauté (appelées <em>spins</em>) <a href="https://spins.fedoraproject.org/fr/" target="_blank" rel="noopener">ici</a>.<br>
+Si vous développez, notamment du web, que vous recherchez une expérience stable et que vous n’êtes pas très féru de personnalisation, Fedora sera votre choix.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_32fe2b3c2107895076861818a85015d8.png" alt=""></p><p><em>Fedora avec GNOME</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://getfedora.org/fr/workstation/download/" target="_blank" rel="noopener">Fedora</a></strong></p>
+</div><hr><h3 id="Pop_Os"><a class="anchor hidden-xs" href="#Pop_Os" title="Pop_Os"><i class="fa fa-link"></i></a>Pop!_Os</h3><p>Toujours dans la lignée des distributions stables, on trouve Pop!_OS. C’est une distribution qui se veut orientée vers les créateurs, mais c’est avant tout une expérience utilisateur soigneusement léchée, et faite pour vous dépayser par son originalité, tout en sachant s’effacer quand il faut pour ne pas perturber votre travail.<br>
+Elle est basée sur Ubuntu pour une compatibilité maximale, et es livrée avec son propre DE, COSMIC, version de GNOME lourdement modifiée pour pouvoir élargire les possibilités de personalisation avec notamment un système de <em>tiling</em> activable, semblable à celui des WM<br>
+De plus, c’est l’une des distribution les mieux équipée pour le gaming <em>out of the box</em><br>
+Si vous voulez découvrir tout ce que Linux a à vous offrir, à travers une distribution à l’esthétique travaillée et pensée pour maximiser votre productivité Pop!_OS ne vous décevra pas.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_95fa394f3bc2bd00cddd22442281f611.png" alt=""></p><p><em>Pop!_OS avec COSMIC</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://pop.system76.com/" target="_blank" rel="noopener">Pop!_OS</a></strong></p>
+</div><hr><h3 id="Manjaro"><a class="anchor hidden-xs" href="#Manjaro" title="Manjaro"><i class="fa fa-link"></i></a>Manjaro</h3><p>On y vient: ma distribution préférée. Manjaro est une distribution basée sur <strong>Arch Linux</strong> et utilise donc le gestionnaire de paquets <code>pacman</code>. Elle est donc compatible avec tout les tutoriels et les logiciels Arch Linux. En revanche, lorsqu’un logiciel est mis à jour, ce qui arrive tout le temps, il est gardé au moins deux semaines dans la branche de test pour vérifier qu’il ne casse pas tout sur votre machine comme ça peut arriver sur Arch Linux. Vous avez donc accès aux logiciels disponibles sur Arch, mais aussi aux <code>AUR</code>, ce qui en fait une force. De plus une attention toute particulière a été apportée aux thèmes avec lesquels la distro est téléchargée, vous offrant une expérience homogène et agréable. Elle est de plus équipée elle aussi pour le gaming <em>out of the box</em>!<br>
+Elle est téléchargeable avec <strong>XFCE</strong>, <strong>KDE</strong> ou <strong>GNOME</strong>, mais on peut trouver <a href="https://manjaro.org/download/#Community" target="_blank" rel="noopener">ici</a> d’autres <em>flavors</em> supportées par la communauté.<br>
+C’est donc une distribution au thème travaillé tout en restant neutre, bardée d’outils de personnalisation et de réparation, si vous aussi vous avez l’habitude de casser vos install, et avec l’intégralité du catalogue des logiciels disponibles sous Linux.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_e81d40deeeb8ef7f2becc4899ad0b401.png" alt=""></p><p><em>Manjaro avec XFCE</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://manjaro.org/download/" target="_blank" rel="noopener">Manjaro</a></strong></p>
+</div><hr><div class="alert alert-info">
+<p><img class="emoji" alt=":video_game:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/video_game.png"> C’est possible le <strong>gaming sous linux</strong>? Eh oui! Si autrefois il fallait utiliser des astuces de l’enfer avec <em>PlayOnLinux</em>, aujourd’hui plus besoin! En effet, en 2013, Valve (l’entreprise qui développe <em>Steam</em>) a sorti une console qui tournait sous Linux. Ce fut un échec commercial du fait de l’absence de jeux compatibles. Depuis, pour pallier ce vide, ils développent un logiciel de compatibilité, <em>Proton</em>, intégré à Steam, pour faire tourner sous Linux les jeux Windows, et qui permet aujourd’hui à plus de <strong>80% des jeux du top 100 Steam</strong> de tourner sans perte de performances notable! Si ça vous intéresse, je vous suggère de vous pencher sur <strong>Proton</strong>, <strong>Vulkan</strong> et <strong>Lutris</strong>, pour découvrir le gaming Linux!</p>
+</div><h3 id="Elementary-OS"><a class="anchor hidden-xs" href="#Elementary-OS" title="Elementary-OS"><i class="fa fa-link"></i></a>Elementary OS</h3><p>C’est l’une des distribution les plus centrées sur la cohérence de son thème, et l’utilisation intuitive. Basée sur Ubuntu, cette distribution a décidé de développer son propre DE, <strong>Pantheon</strong> pour correspondre au mieux à sa philosophie. Clairement inspirée par MacOS, c’est sans doute avec cette distribution que les habitués de ce dernier se sentiront le plus à l’aise. La logithèque est la même qu’Ubuntu à ceci près qu’ils proposent de donner de l’argent aux projets que vous voulez soutenir (vous n’êtes évidemment pas obligé), et qu’ils ont mis en place des standards graphiques pour favoriser l’intégration des applications qui s’y plient à leur thème.<br>
+Riche en fonctionnalité, c’est une distribution qui saura convaincre par sa facilité d’utilisation.<br>
+Si vous venez de MacOS, ou que vous y êtes habitué, et que vous souhaitez l’expérience de bureau probablement la plus poussée existante, Elementary OS est pour vous</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_6b7900ec75f6d4e7719b5b4157cd63fa.png" alt=""></p><p><em>Elementary OS avec Pantheon</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://elementary.io/fr/" target="_blank" rel="noopener">Elementary OS</a></strong></p>
+</div><h3 id="Linux-Lite"><a class="anchor hidden-xs" href="#Linux-Lite" title="Linux-Lite"><i class="fa fa-link"></i></a>Linux Lite</h3><p>Distribution basée sur Ubuntu, seule de cette liste à se vouloir légère en elle même et pas seulement pour son environnement de bureau, c’est une distribution plutôt récente qui offre une expérience agréable sur les petites configurations. Avec sa version joliment travaillée d’<strong>XFCE</strong>, c’est la distribution idéale pour dépoussiérer le vieil ordinateur de famille qui prend la poussière, ou pour votre mamie qui galère avec l’informatique en général. Sur cette distribution, tout est écrit en gros et clairement identifiable, le tout pour une expérience utilisateur facile d’accès, même pour les moins férus d’informatique.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_7d8363dd7fff6f99739cca7409c77a0f.png" alt=""></p><p><em>Linux Lite avec XFCE</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://www.linuxliteos.com/index.html" target="_blank" rel="noopener">Linux Lite</a></strong></p>
+</div><hr><h3 id="Kali"><a class="anchor hidden-xs" href="#Kali" title="Kali"><i class="fa fa-link"></i></a>Kali</h3><p>Ah, Kali. A la sortie de <em>Mr Robot</em>, nombreux sont ceux qui se sont sentis l’âme d’un hacker et ont cassé leurs machines en essayant de l’installer. En effet, Kali n’est pas une distribution pour débutants. C’est une distribution basée sur Debian et orientée spécialement vers le hacking et le <em>pentesting</em>. Elle est vient donc avec de nombreux outils pré-installés pour tordre votre réseau dans tout les sens afin d’y repérer des failles. Mais c’est tout. Sur Kali, il n’y a rien d’autre, même l’éditeur de texte doit être installé manuellement. De plus, étant prévue pour tester les failles de sécurité des réseaux, cela ne veut pas dire qu’elle est partivulièrement armée pour déjouer des attaques sur votre machine, bien au contraire, de nombreuses vulnérabilités existent volontairement pour permettre aux outils de <em>pentesting</em> de fonctionner correctement. C’est donc une distribution que je ne vous conseille d’installer que si vous savez ce que vous faites et que vous en avez besoin (si vous êtes dans la filière cyber-sécu par exemple). Mais surtout en dual-boot, pour avoir à côté une install sur laquelle vous pouvez travailler en toute sécurité pour vos données.<br>
+Kali est disponible avec <strong>XFCE</strong> par défaut, mais on peut choisir <strong>GNOME</strong> ou <strong>KDE</strong> <em>lors de l’installation, comme pour Debian</em>, avec un thème tout à fait agréable.<br>
+En résumé: résistez à vos penchants de hacker-brun-ténébreux! N’installez cette distribution que si vous savez ce que vous faites.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_b9befe20f3cae1f423e4feaf0bac347e.png" alt=""></p><p><em>Kali avec XFCE</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://www.kali.org/get-kali/#kali-bare-metal" target="_blank" rel="noopener">Kali</a></strong></p>
+</div><hr><h2 id="Mentions-honorables"><a class="anchor hidden-xs" href="#Mentions-honorables" title="Mentions-honorables"><i class="fa fa-link"></i></a>Mentions honorables</h2><p>Au delà de ces distributions classiques, d’accès relativement facile, il y en a quelques-unes prometteuses mais dont certaines caractéristiques ont fait que je ne les ai pas ajoutées à la sélection ci-dessus.</p><h3 id="Solus-Project"><a class="anchor hidden-xs" href="#Solus-Project" title="Solus-Project"><i class="fa fa-link"></i></a>Solus Project</h3><p>Eh oui, j’ai réussi à le placer quelque part! C’est une très jolie distribution à laquelle on doit le DE <strong>Budgie</strong>. Cependant, étant totalement indépendante, son écosystème de logiciels n’est pas très étendu, malgré son gestionnaire de paquets tout à fait fonctionnel: <code>eopkg</code><br>
+Une distribution orientée bureautique bien pensée et qui mérite qu’on s’y arrête.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_d62602c992dedf003b127af4b6dae5f9.png" alt=""></p><p><em>Solus Project avec Budgie</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://getsol.us/home/" target="_blank" rel="noopener">Solus Project</a></strong></p>
+</div><hr><h3 id="Gentoo"><a class="anchor hidden-xs" href="#Gentoo" title="Gentoo"><i class="fa fa-link"></i></a>Gentoo</h3><p>Allez, celle là c’est pour rire. Elle est connue, mais si vous avez trouvé qu’Arch Linux était difficile à installer, vous allez claquer du fessier. Le gestionnaire de paquet de celle-ci est <code>portage</code>, et le concept est qu’il <strong>compile</strong> tout avant de l’installer, pour utiliser au maximum les instructions d’optimisation de votre processeur. C’est un processus long est douloureux, et si votre processeur est cadencé à moins de 3 GHz, attendez vous à y passer plusieurs jours. C’est un peu amusant au début, et très instructif sur le fonctionnement de linux, la compilation du kernel et autre, mais lorsqu’on se relance dans une compilation de 2h de Mozilla Firefox pour la 3e fois de la semaine à cause des mises à jour en continue, on finit par se dire que les distributions pré-compilées, c’est pas mal. Ceci dit, les tutoriels sont bien faits.</p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://www.gentoo.org/downloads/" target="_blank" rel="noopener">Gentoo</a></strong> (Vous êtes sûrs?)</p>
+</div><hr><h3 id="OpenSUSE"><a class="anchor hidden-xs" href="#OpenSUSE" title="OpenSUSE"><i class="fa fa-link"></i></a>OpenSUSE</h3><p>Je n’ai personnellement jamais compris l’intérêt de cette distribution allemande, mais elle a un grand nombre de fans, donc je me dois de la mentionner. Elle utilise <code>ZYpp</code> comme gestionnaire de paquets. Son ecosystème est plutôt large, et l’équipe de développement travaille main dans la main avec celle du projet <strong>KDE</strong> ce qui lui donne un environnement de bureau sur mesure, même si on peut choisir lors de l’installation plusieurs autres DE.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_65c9d4613f89333adeff904e59b2aa02.png" alt=""></p><p><em>OpenSUSE avec KDE</em></p><div class="alert alert-success">
+<p><img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"> Télécharger <strong><a href="https://www.opensuse.org/" target="_blank" rel="noopener">OpenSUSE</a></strong></p>
+</div><hr><h1 id="Conclusion"><a class="anchor hidden-xs" href="#Conclusion" title="Conclusion"><i class="fa fa-link"></i></a>Conclusion</h1><p>Comme vous avez pu le voir sur ce tuto, le monde de Linux est infiniment riche, et vous n’aurez jamais fini de l’explorer. Surtout, n’ayez pas peur de ne pas choisir <strong>la</strong> bonne distro dès le début. Au contraire, lâchez vous essayez plein de distros et plein de DE différents, jusqu’à trouver ce qui vous plaira… Pour un temps! On appelle ça le <em>distro-hopping</em>, et c’est une pratique courante. En revanche, je vous conseille avant de commencer, de <a href="https://www.tecmint.com/move-home-directory-to-new-partition-disk-in-linux/" target="_blank" rel="noopener">mettre vos donnée sur une partition séparée</a>, pour ne pas tout perdre à chaque installation… Même si c’est une pratique qui demande un peu de savoir faire, ça vous fera gagner pas mal de temps. Ou alors copiez tout sur une clef USB à chaque fois, c’est vous qui voyez. Bon <em>distro-hopping</em>!</p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Choisir-une-distribution-Linux-qui-correspond-à-ses-besoins" title="Choisir une distribution Linux qui correspond à ses besoins">Choisir une distribution Linux qui correspond à ses besoins</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li><a href="#Mais-dis-donc-Jamy-qu’est-ce-que-c’est-l’Open-Source" title="Mais dis donc Jamy, qu’est-ce que c’est l’Open Source?">Mais dis donc Jamy, qu’est-ce que c’est l’Open Source?</a></li>
+<li><a href="#C’est-quoi-un-“kernel”" title="C’est quoi un “kernel”?">C’est quoi un “kernel”?</a></li>
+<li><a href="#Il-y-a-beaucoup-de-distributions" title="Il y a beaucoup de distributions?">Il y a beaucoup de distributions?</a></li>
+</ul>
+</li>
+<li><a href="#Les-environnements-de-bureau" title="Les environnements de bureau">Les environnements de bureau</a><ul class="nav">
+<li><a href="#Les-environnements-“riches”" title="Les environnements “riches”">Les environnements “riches”</a><ul class="nav">
+<li><a href="#GNOME" title="GNOME">GNOME</a></li>
+<li><a href="#KDE" title="KDE">KDE</a></li>
+<li><a href="#Cinnamon" title="Cinnamon">Cinnamon</a></li>
+<li><a href="#Budgie" title="Budgie">Budgie</a></li>
+</ul>
+</li>
+<li><a href="#Les-environnements-légers" title="Les environnements légers">Les environnements légers</a><ul class="nav">
+<li><a href="#XFCE" title="XFCE">XFCE</a></li>
+<li><a href="#Mate" title="Mate">Mate</a></li>
+<li><a href="#LXQt" title="LXQt">LXQt</a></li>
+</ul>
+</li>
+<li><a href="#Et-les-gestionnaires-de-fenêtre-dans-tout-ça" title="Et les gestionnaires de fenêtre dans tout ça?">Et les gestionnaires de fenêtre dans tout ça?</a></li>
+<li><a href="#Si-je-viens-de-MacOS-comment-je-m’y-retrouve-dans-tout-ça" title="Si je viens de MacOS, comment je m’y retrouve dans tout ça?">Si je viens de MacOS, comment je m’y retrouve dans tout ça?</a></li>
+<li><a href="#Pour-conclure-sur-les-DE" title="Pour conclure sur les DE">Pour conclure sur les DE</a></li>
+</ul>
+</li>
+<li><a href="#Bon-on-les-choisis-ces-distributions" title="Bon, on les choisis ces distributions?">Bon, on les choisis ces distributions?</a><ul class="nav">
+<li><a href="#Les-gestionnaires-de-paquets" title="Les gestionnaires de paquets">Les gestionnaires de paquets</a></li>
+<li><a href="#Les-distributions-“de-base”" title="Les distributions “de base”">Les distributions “de base”</a><ul class="nav">
+<li><a href="#Ubuntu" title="Ubuntu">Ubuntu</a></li>
+<li><a href="#Debian" title="Debian">Debian</a></li>
+<li><a href="#Arch-Linux" title="Arch Linux">Arch Linux</a></li>
+<li><a href="#RHEL" title="RHEL">RHEL</a></li>
+</ul>
+</li>
+<li><a href="#Les-distributions-“basées”" title="Les distributions “basées”">Les distributions “basées”</a><ul class="nav">
+<li><a href="#Linux-Mint" title="Linux Mint">Linux Mint</a></li>
+<li><a href="#Fedora" title="Fedora">Fedora</a></li>
+<li><a href="#Pop_Os" title="Pop!_Os">Pop!_Os</a></li>
+<li><a href="#Manjaro" title="Manjaro">Manjaro</a></li>
+<li><a href="#Elementary-OS" title="Elementary OS">Elementary OS</a></li>
+<li><a href="#Linux-Lite" title="Linux Lite">Linux Lite</a></li>
+<li><a href="#Kali" title="Kali">Kali</a></li>
+</ul>
+</li>
+<li><a href="#Mentions-honorables" title="Mentions honorables">Mentions honorables</a><ul class="nav">
+<li><a href="#Solus-Project" title="Solus Project">Solus Project</a></li>
+<li><a href="#Gentoo" title="Gentoo">Gentoo</a></li>
+<li><a href="#OpenSUSE" title="OpenSUSE">OpenSUSE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Conclusion" title="Conclusion">Conclusion</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Choisir-une-distribution-Linux-qui-correspond-à-ses-besoins" title="Choisir une distribution Linux qui correspond à ses besoins">Choisir une distribution Linux qui correspond à ses besoins</a></li>
+<li><a href="#Introduction" title="Introduction">Introduction</a><ul class="nav">
+<li><a href="#Mais-dis-donc-Jamy-qu’est-ce-que-c’est-l’Open-Source" title="Mais dis donc Jamy, qu’est-ce que c’est l’Open Source?">Mais dis donc Jamy, qu’est-ce que c’est l’Open Source?</a></li>
+<li><a href="#C’est-quoi-un-“kernel”" title="C’est quoi un “kernel”?">C’est quoi un “kernel”?</a></li>
+<li><a href="#Il-y-a-beaucoup-de-distributions" title="Il y a beaucoup de distributions?">Il y a beaucoup de distributions?</a></li>
+</ul>
+</li>
+<li><a href="#Les-environnements-de-bureau" title="Les environnements de bureau">Les environnements de bureau</a><ul class="nav">
+<li><a href="#Les-environnements-“riches”" title="Les environnements “riches”">Les environnements “riches”</a><ul class="nav">
+<li><a href="#GNOME" title="GNOME">GNOME</a></li>
+<li><a href="#KDE" title="KDE">KDE</a></li>
+<li><a href="#Cinnamon" title="Cinnamon">Cinnamon</a></li>
+<li><a href="#Budgie" title="Budgie">Budgie</a></li>
+</ul>
+</li>
+<li><a href="#Les-environnements-légers" title="Les environnements légers">Les environnements légers</a><ul class="nav">
+<li><a href="#XFCE" title="XFCE">XFCE</a></li>
+<li><a href="#Mate" title="Mate">Mate</a></li>
+<li><a href="#LXQt" title="LXQt">LXQt</a></li>
+</ul>
+</li>
+<li><a href="#Et-les-gestionnaires-de-fenêtre-dans-tout-ça" title="Et les gestionnaires de fenêtre dans tout ça?">Et les gestionnaires de fenêtre dans tout ça?</a></li>
+<li><a href="#Si-je-viens-de-MacOS-comment-je-m’y-retrouve-dans-tout-ça" title="Si je viens de MacOS, comment je m’y retrouve dans tout ça?">Si je viens de MacOS, comment je m’y retrouve dans tout ça?</a></li>
+<li><a href="#Pour-conclure-sur-les-DE" title="Pour conclure sur les DE">Pour conclure sur les DE</a></li>
+</ul>
+</li>
+<li><a href="#Bon-on-les-choisis-ces-distributions" title="Bon, on les choisis ces distributions?">Bon, on les choisis ces distributions?</a><ul class="nav">
+<li><a href="#Les-gestionnaires-de-paquets" title="Les gestionnaires de paquets">Les gestionnaires de paquets</a></li>
+<li><a href="#Les-distributions-“de-base”" title="Les distributions “de base”">Les distributions “de base”</a><ul class="nav">
+<li><a href="#Ubuntu" title="Ubuntu">Ubuntu</a></li>
+<li><a href="#Debian" title="Debian">Debian</a></li>
+<li><a href="#Arch-Linux" title="Arch Linux">Arch Linux</a></li>
+<li><a href="#RHEL" title="RHEL">RHEL</a></li>
+</ul>
+</li>
+<li><a href="#Les-distributions-“basées”" title="Les distributions “basées”">Les distributions “basées”</a><ul class="nav">
+<li><a href="#Linux-Mint" title="Linux Mint">Linux Mint</a></li>
+<li><a href="#Fedora" title="Fedora">Fedora</a></li>
+<li><a href="#Pop_Os" title="Pop!_Os">Pop!_Os</a></li>
+<li><a href="#Manjaro" title="Manjaro">Manjaro</a></li>
+<li><a href="#Elementary-OS" title="Elementary OS">Elementary OS</a></li>
+<li><a href="#Linux-Lite" title="Linux Lite">Linux Lite</a></li>
+<li><a href="#Kali" title="Kali">Kali</a></li>
+</ul>
+</li>
+<li><a href="#Mentions-honorables" title="Mentions honorables">Mentions honorables</a><ul class="nav">
+<li><a href="#Solus-Project" title="Solus Project">Solus Project</a></li>
+<li><a href="#Gentoo" title="Gentoo">Gentoo</a></li>
+<li><a href="#OpenSUSE" title="OpenSUSE">OpenSUSE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Conclusion" title="Conclusion">Conclusion</a></li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>

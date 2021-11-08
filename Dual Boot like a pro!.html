@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Dual Boot like a pro! - CodiMD
+    </title>
+    <link rel="icon" type="image/png" href="https://markdown.data-ensta.fr/favicon.png">
+    <link rel="apple-touch-icon" href="https://markdown.data-ensta.fr/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha256-H0KfTigpUV+0/5tn2HXC0CPwhhDhWgSawJdnFd0CGCo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.3/css/fork-awesome.min.css" integrity="sha256-ZhApazu+kejqTYhMF+1DzNKjIzP7KXu6AzyXcC1gMus=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.night .markdown-body blockquote{color:#bcbcbc}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.night .markdown-body h1,.night .markdown-body h2,.night .markdown-body h3,.night .markdown-body h4,.night .markdown-body h5,.night .markdown-body h6{color:#ddd}.markdown-body h1 .fa-link,.markdown-body h2 .fa-link,.markdown-body h3 .fa-link,.markdown-body h4 .fa-link,.markdown-body h5 .fa-link,.markdown-body h6 .fa-link{color:#000;vertical-align:middle;visibility:hidden;font-size:16px}.night .markdown-body h1 .fa-link,.night .markdown-body h2 .fa-link,.night .markdown-body h3 .fa-link,.night .markdown-body h4 .fa-link,.night .markdown-body h5 .fa-link,.night .markdown-body h6 .fa-link{color:#fff}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .fa-link,.markdown-body h2:hover .anchor .fa-link,.markdown-body h3:hover .anchor .fa-link,.markdown-body h4:hover .anchor .fa-link,.markdown-body h5:hover .anchor .fa-link,.markdown-body h6:hover .anchor .fa-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.night .markdown-body table tr{background-color:#5f5f5f}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.night .markdown-body table tr:nth-child(2n){background-color:#4f4f4f}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.night .markdown-body code,.night .markdown-body tt{color:#eee;background-color:hsla(0,0%,90.2%,.36)}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\A0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.night .markdown-body pre{filter:invert(100%)}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.night .markdown-body .gist table tr:nth-child(2n){background-color:#ddd}.markdown-body code[data-gist-id]{background:none;padding:0;filter:invert(100%)}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.geo,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.night .markdown-body pre.graphviz .graph>polygon{fill:#333}.night .markdown-body pre.mermaid .sectionTitle,.night .markdown-body pre.mermaid .titleText,.night .markdown-body pre.mermaid text{fill:#fff}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.night .markdown-body .abc path{fill:#eee}.night .markdown-body .abc path.note_selected{fill:##4DD0E1}.night tspan{fill:#fefefe}.night pre rect{fill:transparent}.night pre.flow-chart path,.night pre.flow-chart rect{stroke:#fff}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body img{background-color:transparent}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;-webkit-transition:opacity .2s;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;-webkit-transition:opacity .2s;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.geo-map{width:100%;height:250px}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.9;background-color:#ccc;border:none}.ui-toc-label,.ui-toc .open .ui-toc-label{-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#5f5f5f}.ui-toc-label:focus{opacity:1;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;-webkit-transition:opacity .2s;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.night .ui-toc-dropdown .nav>li>a:focus,.night .ui-toc-dropdown .nav>li>a:hover{color:#fff;border-left-color:#fff}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.night .ui-toc-dropdown .nav>.active:focus>a,.night .ui-toc-dropdown .nav>.active:hover>a,.night .ui-toc-dropdown .nav>.active>a{color:#fff;border-left:2px solid #fff}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.night .ui-toc-dropdown .nav>li>a{color:#aaa}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,"\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3",Osaka,Meiryo,"\30E1\30A4\30EA\30AA",MS Gothic,"\FF2D\FF33   \30B4\30B7\30C3\30AF",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,"\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF",sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,"\5FAE\8EDF\6B63\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,"\5FAE\8EDF\6B63\9ED1UI",sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1",sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,"\5FAE\8F6F\96C5\9ED1UI",sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:rgba(0,0,0,.85)}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}small span{line-height:22px}small .dropdown{display:inline-block}small .dropdown a:focus,small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}.night .navbar{background:#333;border-bottom-color:#333;color:#eee}.night .navbar a{color:#eee}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid"><style>
+#doc>div, #doc>p, #doc>ul {
+    text-align: justify;
+}
+</style><h1 id="Dual-Boot-like-a-pro"><a class="anchor hidden-xs" href="#Dual-Boot-like-a-pro" title="Dual-Boot-like-a-pro"><i class="fa fa-link"></i></a>Dual Boot like a pro!</h1><h2 id="Avant-le-Dual-Boot…-Le-Boot"><a class="anchor hidden-xs" href="#Avant-le-Dual-Boot…-Le-Boot" title="Avant-le-Dual-Boot…-Le-Boot"><i class="fa fa-link"></i></a>Avant le Dual Boot… Le Boot</h2><h3 id="Commençons-par-un-peu-de-vocabulaire"><a class="anchor hidden-xs" href="#Commençons-par-un-peu-de-vocabulaire" title="Commençons-par-un-peu-de-vocabulaire"><i class="fa fa-link"></i></a>Commençons par un peu de vocabulaire</h3><p>Lorsque vous appuyez sur le bouton power de votre ordinateur, le courant se propage instantanément à travers votre carte mère et ses différents composants, dont votre processeur, ou <strong>CPU</strong>. Seulement votre CPU est une machine à interpréter des instructions binaires, sous la forme</p><pre><code>instruction paramètre-1 paramètre-2 ... pointeur-où-stocker-le-résultat-calculé
+</code></pre><p>Il n’est donc pas vraiment <em>malin</em> et ne va pas <strong>de lui-même</strong> inventer des instructions à interpréter pour se créer une structure mémoire cohérente, un environnement graphique etc. Il va donc avoir besoin d’un pré-programme, qui va lui servir sur un plateau les premières instructions dont il va avoir besoin pour prendre ensuite le relais et devenir autonome. Ce programme s’appelle le <em>Basic Input Output System</em>, ou <strong>BIOS</strong>. Le BIOS va donc chercher à certaines adresses mémoires bien précises, qui vont permettre de charger en mémoire tout un environnement compréhensible et pilotable par l’utilisateur, d’où son nom: <em>Operating System</em>, ou <strong>OS</strong>. Tout ce processus s’appelle le <em>boot</em>. C’est un enchaînement d’opérations critiques très bas niveau, qu’il est délicat de modifier, et c’est ce qu’on va détailler ici.</p><h3 id="Mais-qu’est-ce-que-c’est-un-Dual-Boot-alors"><a class="anchor hidden-xs" href="#Mais-qu’est-ce-que-c’est-un-Dual-Boot-alors" title="Mais-qu’est-ce-que-c’est-un-Dual-Boot-alors"><i class="fa fa-link"></i></a>Mais qu’est-ce que c’est un Dual Boot alors?</h3><p>Un Dual Boot, c’est le fait d’avoir deux OS installés sur sa machine, et de pouvoir choisir entre les deux. Vous imaginez donc bien qu’on ne peut pas juste demander au BIOS de choisir entre deux sets d’instructions à envoyer au processeur au démarrage, c’est bien plus complexe que ça, d’où ce tutoriel.</p><div class="alert alert-success">
+<p>Dans la suite, nous allons nous mettre dans la peau d’un utilisateur qui souhaiterait installer une distribution Linux à côté de son installation Windows.</p>
+</div><h2 id="Le-BIOS-et-le-choix-des-périphériques"><a class="anchor hidden-xs" href="#Le-BIOS-et-le-choix-des-périphériques" title="Le-BIOS-et-le-choix-des-périphériques"><i class="fa fa-link"></i></a>Le BIOS et le choix des périphériques</h2><p>Vous aurez peut être remarqué lorsque votre ordinateur démarre, généralement lorsque vous voyez un gros logo de la marque de votre ordinateur s’afficher, un petit message en bas à gauche de votre écran indiquant quelque chose comme ça:</p><pre><code>Press &lt;Esc&gt; for BIOS, &lt;F2&gt; for boot menu
+</code></pre><p>Les touches indiquées dépendent du <a href="https://www.tomshardware.com/reviews/bios-keys-to-access-your-firmware,5732.html" target="_blank" rel="noopener">fabricant de la carte mère</a> de votre ordinateur, qui est généralement le même qui a assemblé votre PC.</p><div class="alert alert-info">
+<p>Si aucune touche ne s’affiche, pas de panique! Il s’agit généralement de l’option <em>Fast Startup</em> de Windows, qui lors de l’extinction de votre ordinateur, le plonge dans une espèce d’état hybride de veille très profonde. Pour accéder au BIOS, il vous faudra aller dans Windows et ensuite dans <strong>Settings &gt; Updates &amp; Security &gt; Recovery</strong> et cliquer sur l’option <strong>Restart now</strong> en dessous de <strong>Advanced Startup</strong>. Au redémarrage, dans le menu qui s’affichera, faites <strong>Troubleshoot &gt; Advanced Options &gt; UEFI Firmware Settings &gt; Restart</strong> et vous devriez <em>enfin</em> avoir accès à votre BIOS <img class="emoji" alt=":sunglasses:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/sunglasses.png"></p>
+</div><p>En appuyant sur celle correspondant au BIOS, vous verrez s’ouvrir un menu, dans lequel vous pourrez modifier l’essentiel des paramètres que va utiliser le BIOS pour démarrer votre processeur et donc votre ordinateur. Ce sont généralement des paramètres assez avancés qui ne vont pas nécessairement vous intéresser, à quelques exceptions près:</p><ul>
+<li>Les options de <strong>priorité de boot</strong></li>
+<li>Le <strong>secure boot</strong></li>
+<li>Les options concernant l’<strong>USB</strong></li>
+</ul><p>Nous allons voir chacune de ces options une à une.</p><div class="alert alert-success">
+<p>Pour les petits curieux qui voudraient savoir à quoi servent les autres options du BIOS : l’essentiel servent à définir comment votre BIOS va passer la main sur les périphériques à votre OS, et dans l’immense majorité des cas, vous n’aurez jamais à vous soucier de ces paramètres.</p>
+</div><center>
+<p><img src="https://www.unbxtech.com/wp-content/uploads/2018/04/bios-jpeg-696x522.jpg" alt=""></p>
+</center><p><em>L’UEFI d’une carte mère GIGABYTE</em></p><h3 id="Les-priorités-de-boot"><a class="anchor hidden-xs" href="#Les-priorités-de-boot" title="Les-priorités-de-boot"><i class="fa fa-link"></i></a>Les priorités de boot</h3><p>L’un des paramètres essentiel du BIOS, vous l’aurez peut être deviné, c’est le disque, ou plus généralement le système de stockage sur lequel il va aller chercher les premières instructions à envoyer à votre processeur. Comme pour un OS est fait pour surtout ne <strong>jamais</strong> modifier ces instructions-ci sur le disque où il est installé, nous allons devoir utiliser un périphérique externe, souvent une clef USB, ou un lecteur CD/DVD sur les plus vieilles machines, sur lequel le BIOS va faire booter l’ordinateur. Il va falloir alors venir sélectionner notre clef USB dans cette liste.</p><h3 id="Le-secure-boot"><a class="anchor hidden-xs" href="#Le-secure-boot" title="Le-secure-boot"><i class="fa fa-link"></i></a>Le secure boot</h3><p>Cette option vise à protéger votre ordinateur contre des programmes pirates qui voudraient accéder à vos données. En effet, ceux qui ont déjà booté une clef d’installation Linux auront remarqué que l’on peut accéder à toutes les données du disque dur, et ce sans aucun mot de passe. Problématique si l’on travaille pour une entreprise qui possède des données sensibles non? C’est pourquoi il existe l’option <em>secure boot</em> qui va, au démarrage de l’appareil, vérifier que le programme que le BIOS essaie de faire charger à l’ordinateur contient bien une clef de validation parmis une liste pré-déterminée par le fabricant de votre machine. Or, malgré des tentatives de nombreuses distributions Linux d’obtenir de telles clefs, certains fabricants restent réticents. Heureusement, il est très facile de désactiver une telle option, moyennant cependant généralement une petite manipulation. En effet, si n’importe qui pouvait désactiver cette option aussi facilement, cette sécurité serait inutile.</p><p>La méthode consiste en l’utilisation d’un <strong>mot de passe</strong> pour accéder au BIOS. Mais je n’ai pas eu à taper de mot de passe, me direz vous. C’est normal, c’est à vous de le définir! L’idée étant que dans le cadre de données d’entreprise classées, le service IT définisse un tel mot de passe avant de vous passer cet ordinateur, pour être sûr que vous ne risquiez pas de faire de bêtises. En effet, une fois ce mot de passe défini, il vous faudra le renseigner à chaque fois que vous voudrez accéder au BIOS. Pour ce faire, vous trouverez dans l’onglet <strong>security</strong> de votre BIOS un champ <strong>Administrator’s password</strong>. Il vous suffit de le définir et de rebooter votre machine pour l’activer et accéder à votre BIOS avec les droits admin qui vous permettront de désactiver le <em>Secure boot</em> (Attention: dans le BIOS votre clavier est certainement en QWERTY). Une fois votre dual boot terminé, vous pourrez aller retirer ce mot de passe (en laissant le champ vide).</p><div class="alert alert-info">
+<p>Un mot de passe BIOS empêchera quelqu’un de booter sur une clef et d’accéder à vos données, mais pas de sortir votre disque de votre ordinateur, le brancher à un autre et accéder à vos données. Pour une sécurité plus complète, il vaut mieux <strong>encrypter son disque</strong>. Certaines distributions le proposent par défaut, mais il faut cependant noter que <strong>ça ralentira considérablement le boot</strong> de votre ordi, du fait du décryptage.</p>
+</div><h3 id="Les-options-concernant-l’USB"><a class="anchor hidden-xs" href="#Les-options-concernant-l’USB" title="Les-options-concernant-l’USB"><i class="fa fa-link"></i></a>Les options concernant l’USB</h3><p>Il est possible que votre clef de boot n’apparaisse pas lorsque vous regardez vos priorités de boot. Deux causes possibles :</p><ul>
+<li>la première est que vous avez branché votre clef USB trop tard dans votre processus de boot, l’idéal étant de la brancher avant même d’appuyer sur le bouton d’alimentation. Rédémarrez votre ordinateur avec votre clef USB déjà insérée.</li>
+<li>Si celle-ci n’apparaît toujours pas, c’est possiblement la deuxième possibilité: votre BIOS n’est pas configuré pour accepter les clefs USB. Il faut donc que vous le fouilliez pour trouver une option pour activer cette fontionnalité, probablement dans les onglets <em>Boot</em> ou <em>Security</em>.</li>
+</ul><p>Il est possible que votre BIOS vous parle de <em>UEFI</em> ou de <em>Legacy</em>, surtout si votre ordinateur est un peu vieux. Et ça tombe bien, c’est ce dont on parle juste après.</p><h3 id="Le-Legacy-et-le-UEFI"><a class="anchor hidden-xs" href="#Le-Legacy-et-le-UEFI" title="Le-Legacy-et-le-UEFI"><i class="fa fa-link"></i></a>Le <em>Legacy</em> et le <em>UEFI</em></h3><p>La technologie du BIOS remonte aux années 70, et n’a que très peu évolué. C’est pourquoi il a fallu la moderniser en la remplaçant dans les années 2000 par le standard <strong>UEFI</strong>. L’ancien standard s’est donc logiquement fait renommer <strong>Legacy</strong>. Ici le choix est simple: si votre BIOS vous propose de choisir entre les deux, l’UEFI est plus moderne, plus sécurisé (notamment immunisé à certains malware), c’est donc même pas une question, <strong>choisissez l’UEFI</strong>. Si vous n’avez pas le choix et que vous voulez savoir quel est le standard de votre ordinateur, suivez <a href="https://itsfoss.com/check-uefi-or-bios/" target="_blank" rel="noopener">ce guide</a>, mais globalement, si votre souris est active dans le BIOS, c’est forcément du UEFI, et si votre ordinateur se fait vraiment vieux, c’est probablement du Legacy.</p><center>
+<p><img src="https://docs.oracle.com/cd/E23161_01/html/E65762/figures/mblegacybootV6.PNG" alt=""></p>
+</center><p><em>Choix du mode de boot</em></p><div class="alert alert-info">
+<p>Aujourd’hui, on regroupe indifféremment les BIOS et l’UEFI sour le terme <strong>BIOS</strong></p>
+</div><h3 id="Et-enfin-le-boot"><a class="anchor hidden-xs" href="#Et-enfin-le-boot" title="Et-enfin-le-boot"><i class="fa fa-link"></i></a>Et enfin: le boot</h3><p>Une fois que vous avez réglé tout les détails nécessaires dans le BIOS, vous pouvez sauvegarder et redémarrer votre machine (en appuyant sur <em>F10</em> généralement).</p><h2 id="Partitionnement-File-System-et-Chargeur-d’amorçage"><a class="anchor hidden-xs" href="#Partitionnement-File-System-et-Chargeur-d’amorçage" title="Partitionnement-File-System-et-Chargeur-d’amorçage"><i class="fa fa-link"></i></a>Partitionnement, File System et Chargeur d’amorçage.</h2><p>Houlala en voilà des nouveaux termes <img class="emoji" alt=":face_with_one_eyebrow_raised:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/face_with_one_eyebrow_raised.png"> ! Ne vous inquiétez pas, on va tout détailler ensemble, pas à pas.<br>
+Sachez simplement qu’on passe à l’étape qui différencie le <strong>n00b</strong> de l’installation Linux du véritable <strong>haXX0r</strong> avec beaucoup de swagg: la préparation de votre disque.<br>
+Si vous êtes très pressé et voulez entrer directement dans le vif, vous pouvez rendez vous dans <a href="#Pr%C3%A9paration">la partie suivante</a></p><div class="alert alert-info">
+<p>L’outil de partitionnement que j’utilise ici s’appelle <strong>gparted</strong>, et on le trouve sur l’essentiel des <strong>lives USB</strong>, sauf celles qui viennent avec KDE, sur lesquelles on trouve un équivalent: <strong>partitionmanager</strong></p>
+</div><h4 id="Le-MBR-et-le-GPT"><a class="anchor hidden-xs" href="#Le-MBR-et-le-GPT" title="Le-MBR-et-le-GPT"><i class="fa fa-link"></i></a>Le MBR et le GPT</h4><p>Tout d’abord, votre disque dur, comme tout périphérique de stockage, peut être séparé en différents blocs de données indépendants, que l’on appelle des <em>partitions</em>, et qui se comporteront comme autant de disques durs du point de vue de votre OS. Pour connaître les partitions présentes sur votre disque, votre ordinateur va avoir besoin d’une sorte de carte pour savoir à quel endroit commencent et finissent <strong>physiquemenent</strong> ces partitions sur votre disque. Cette carte s’appelle une <em>table de partition</em>. Il existe deux types de table de partition:</p><ul>
+<li>Les tables de type <em>Master Boot Record</em>, ou <strong>MBR</strong>, que vous verrez parfois appelé aussi <em>ms-dos</em> par les gestionnaires de partition Linux lors de vos installations. C’est un vieux standard assez capricieux, qui notamment ne gère pas les disques de plus de 2,2 To puisqu’il a été créé à une époque où cette quantité de stockage était complètement inimaginable. De plus, la table de partition n’est qu’en un seul exemplaire sur le disque, et s’il lui arrive quoi que ce soit, votre disque sera probablement définitivement perdu. Plus ennyueux, ce standard ne supporte que 4 partitions par disque, ce qui peut devenir vite limitant.</li>
+</ul><div class="alert alert-info">
+<p>Pour y rémédier, il y a été créé une distinction entre les partitions de types <em>primaires</em>, et les partitions de type <em>extended</em>, qui sont grosso-modo des partitions de type primaires que l’on peut ensuite subdiviser en sous partitions, mais cela ne règle le problème que partiellement parce qu’il est recommandé de toujours installer son OS sur une partition de type primaire</p>
+</div><div class="alert alert-danger">
+<p>Et <strong>COMME PAR HASARD</strong>, Windows se crée généralement une partition de données et <strong>3</strong> partitions <em>soi-disant</em> système, donc dans ce genre de configuration, il vous sera obligatoire de supprimer votre partition “recovery” par exemple</p>
+</div><ul>
+<li>Les tables de type <em>Globally unique identifier Partition Table</em>, ou <strong>GPT</strong> (ou encore <em>GUID</em>) sont le standard moderne, créé en même temps que l’UEFI, et qui règle ces problèmes en grande majorité: il gère plusieurs <em>exaoctets</em> de données, crée une copie de la table de partition au tout début et à la toute fin du disque, et permet d’avoir autant de partitions qu’on le souhaite.</li>
+</ul><p><img src="https://markdown.data-ensta.fr/uploads/upload_b69ba8ed46a0b7b65046d0f7637c3bbd.png" alt=""></p><p><em>Création d’une nouvelle table de partition sous gparted</em></p><div class="alert alert-info">
+<p>Vous remarquerez qu’il y a <strong>beaucoup</strong> plus de possibilités que juste <em>msdos</em> et <em>gpt</em>. Cependant, l’essentiel de ces formats n’existe quasiment plus, ou est utilisé dans des cas extrêmement particuliers</p>
+</div><div class="alert alert-warning">
+<p>Attention cependant, lorsque vous créez une nouvelle table de partition, il est courant que <em>gparted</em> sélectionne <em>msdos</em> par défaut, veillez bien à la passer en <em>gpt</em></p>
+</div><h4 id="Et-moi-mon-disque-il-est-comment"><a class="anchor hidden-xs" href="#Et-moi-mon-disque-il-est-comment" title="Et-moi-mon-disque-il-est-comment"><i class="fa fa-link"></i></a>Et moi, mon disque il est comment?</h4><p>Si vous en êtes à l’étape du partitionnement de votre installation Linux, vous devriez pouvoir récupérer cette info dans l’utilitaire de partitionnement (sous gparted, <strong>Affichage &gt; Informations sur le périphérique</strong>), mais généralement, si votre système est de type Legacy, votre table de partitionnement sera en MBR (il est quasiment impossible de faire fonctionner du GPT avec du Legacy), si votre système est en UEFI, votre table de partitionnement sera en GPT (le MBR marche très bien avec l’UEFI mais n’a quasiment que des inconvénients)</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_702a8335d6571417a51afe9a30e6fa10.png" alt=""></p><p><em>Disque vierge avec une table de partition gpt</em></p><div class="alert alert-warning">
+<p>Et si j’ai un disque en MBR et que j’aimerais bien passer en GPT par commodité? Eh bien malheureusement, il est impossible de convertir un disque en MBR vers du GPT à moins de <strong>l’effacer entièrement</strong>. C’est pourquoi il faut faire attention à bien choisir sa table de partition lors du formattage de son disque.</p>
+</div><h3 id="Mais-pourquoi-partitionner"><a class="anchor hidden-xs" href="#Mais-pourquoi-partitionner" title="Mais-pourquoi-partitionner"><i class="fa fa-link"></i></a>Mais pourquoi partitionner?</h3><p>Pour plein de raisons. Quand on fait une installation Linux, on peut tout à fait décider tout mettre dans une unique partition et puis c’est tout. Mais créer différentes partitions peut avoir de multiples avantage. Notamment, ces différentes parties sont considérées comme des disques durs indépendants par votre OS, ce qui permet de les préserver les unes des autres si l’on fait des fausses manip, de conserver ses données intact sans avoir à faire de laborieuses copies sur des disques durs externes lorsque l’on décide de changer de distribution, etc…</p><div class="alert alert-success">
+<p>A l’ère des HDD, il existait une pratique qui consistait à créer une partition sur l’extérieur de son disque dur, c’est à dire la partie qui tourne le plus vite, et permettait de charger plus vite les logiciels installés dessus <img class="emoji" alt=":female-student:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/female-student.png"></p>
+</div><h3 id="Les-formats-de-système-de-fichier"><a class="anchor hidden-xs" href="#Les-formats-de-système-de-fichier" title="Les-formats-de-système-de-fichier"><i class="fa fa-link"></i></a>Les formats de système de fichier</h3><p>Lorsque vous créerez vos partitions, l’utilitaire de partitionnement vous demandera de choisir un système de fichier, ou <em>file system</em>. Il faut bien comprendre que votre disque dur, il va juste écrire des 0 et des 1 à des emplacements mémoires. Se pose alors la question, quand on crée un OS, de la façon dont on va enregistrer nos données, créer une arborescence de fichier, etc. Evidemment, tout le monde fait pas tout ça de la même façon. Si je viens voir dans votre chambre la manière dont vous avez rangé vos cours dans vos étagères, il y a de grande chances que ça soit différent de chez votre voisin. Ben là c’est pareil: <strong>chacun son système de classement</strong>. Il y a les <em>fat</em> (<em>fat16</em>, <em>fat32</em>, <em>exfat</em>, <em>vfat</em>…) et le <em>ntfs</em>, créés par Microsoft, il y a le <em>hfs</em> et le <em>hfs+</em> créé par Apple, et comme sous Linux chacun développe son truc comme ça lui chante, il y en a toute une floppée, les plus classiques étant la famille des <em>ext</em> (<em>ext2</em>, <em>ext3</em>, mais seul le <em>ext4</em> est encore réellement utilisé), le <em>btrfs</em>, le <em>zfs</em>… Chacun apportant son lot d’avantages et d’inconvénients. Pour les débutants, je suggèrerais de se contenter de l’<em>ext4</em> qui est une valeur sûre. Et pour ceux que ça intéresse, allez voir <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_fichiers" target="_blank" rel="noopener">ici</a></p><p><img src="https://markdown.data-ensta.fr/uploads/upload_50cc8ca6124c1841bd40072a87b6485c.png" alt=""></p><p><em>Les différents systèmes de fichier proposés par gparted</em></p><div class="alert alert-info">
+<p>D’ailleurs, on est pas obligés d’utiliser un format “Linux” pour installer Linux. On peut très bien se faire un système de fichier en <em>ntfs</em> par exemple… C’est jute très déconseillé, mais c’est possible… <img class="emoji" alt=":see_no_evil:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/see_no_evil.png"></p>
+</div><h4 id="Et-le-swap-c’est-quoi"><a class="anchor hidden-xs" href="#Et-le-swap-c’est-quoi" title="Et-le-swap-c’est-quoi"><i class="fa fa-link"></i></a>Et le swap, c’est quoi?</h4><p>Alors les plus observateurs auront remarqué le format de fichier appelé <em>linux-swap</em>. S’il y a Linux dans le nom, c’est que ça marche bien avec non? alors oui et non. En fait, le swap, c’est une invention de la communauté Linux, destinée aux vieux ordinateurs qui n’avaient que peu de mémoire vive. Basiquement, le principe d’une partition swap est qu’elle va être considérée par le système comme de la RAM (mémoire vive), et il va donc s’en servir comme tel.</p><p>On pourrait se dire que si l’intérêt de la RAM par rapport au disque dur c’est la vitesse d’accès au données, ça sert à rien de la prolonger sur le disque dur. C’est vrai, mais ici la structure de donnée est pensée pour être accessible bien plus rapidement, et cela permet surtout de soulager la RAM lors des pics d’utilisation intensive. Ca ne fera pas de miracles, mais sur les vieilles configurations, cela peut faire une différence significative.</p><p>De plus, le swap offre une autre possibilié intéressante: la mise en hibernation. C’est une forme de mise en veille plus profonde: en effet votre OS va copier le contenu de votre RAM dans votre swap, et s’éteindre entièrement. Lors du redémarrage, le contenu de votre swap sera simplement re-transféré dans la RAM, et vous retrouverez votre ordinateur dans l’état où vous l’aurez laissé.</p><div class="alert alert-warning">
+<p>Attention cependant si votre disque est un SSD. En effet, à limage des LEDs dont on compte la durée de vie en nombre d’allumages, on compte la durée de vie d’un SSD en nombre d’accès mémoire. Le swap pouvant augmenter fortement ces derniers, il se peut que vous accélériez le vieillissement de votre SSD. Beaucoup le font, mais c’est à vos risques et périls.</p>
+</div><h3 id="Le-chargeur-d’amorçage"><a class="anchor hidden-xs" href="#Le-chargeur-d’amorçage" title="Le-chargeur-d’amorçage"><i class="fa fa-link"></i></a>Le chargeur d’amorçage</h3><p>En voilà un gros morceau. Vous vous souvenez du rôle du BIOS? Il envoie au processeur les premières instructions dont il a besoin pour charger un OS entier, et être autonome. Mais si notre objectif ici est de créer un Dual Boot, comment demander au BIOS de nous laisser choisir quel OS démarrer si on en a deux installés? Une solution serait d’installer chaque OS sur un disque dur séparé, puis de choisir sur lequel booter au démarrage. C’est envisageable, mais ça suppose d’appuyer à chaque démarrage sur la touche de menu de boot, de connaître le matricule un peu barbare de chaque disque et de savoir quel OS est installé sur lequel, mais surtout, ça suppose d’avoir deux disques durs dans son ordinateur! Autant dire que ce n’est pas évident. C’est ici qu’intervient le chargeur d’amorçage. Au démarrage, le BIOS va lui passer la main, et celui-ci va pouvoir afficher un petit menu dans lequel vous allez pouvoir choisir sur quel OS booter. C’est beaucoup plus esthétique en plus d’être une solution beaucoup plus propre.<br>
+Il en existe beaucoup, les plus connus étant <strong>GRUB</strong> (plus précisément <strong>GRUB2</strong>) et <strong>rEFInd</strong>. Linux fonctionne évidemment avec les deux, mais installe par défaut GRUB, qui est très poussé et fonctionne parfaitement dans l’écrasante majorité des cas.</p><pre class="graphviz"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: hierarchy Pages: 1 -->
+<svg width="206pt" height="260pt" viewBox="0.00 0.00 206.39 260.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 256)">
+<title>hierarchy</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-256 202.3878,-256 202.3878,4 -4,4"></polygon>
+<!-- Allumage -->
+<g id="node1" class="node">
+<title>Allumage</title>
+<polygon fill="none" stroke="#000000" points="140.7294,-252 66.0462,-252 66.0462,-216 140.7294,-216 140.7294,-252"></polygon>
+<text text-anchor="middle" x="103.3878" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Allumage</text>
+</g>
+<!-- BIOS -->
+<g id="node2" class="node">
+<title>BIOS</title>
+<polygon fill="none" stroke="#000000" points="130.3878,-180 76.3878,-180 76.3878,-144 130.3878,-144 130.3878,-180"></polygon>
+<text text-anchor="middle" x="103.3878" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">BIOS</text>
+</g>
+<!-- Allumage&#45;&gt;BIOS -->
+<g id="edge1" class="edge">
+<title>Allumage-&gt;BIOS</title>
+<path fill="none" stroke="#00ff00" d="M103.3878,-215.8314C103.3878,-208.131 103.3878,-198.9743 103.3878,-190.4166"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="106.8879,-190.4132 103.3878,-180.4133 99.8879,-190.4133 106.8879,-190.4132"></polygon>
+</g>
+<!-- GRUB -->
+<g id="node3" class="node">
+<title>GRUB</title>
+<polygon fill="none" stroke="#000000" points="131.8299,-108 74.9457,-108 74.9457,-72 131.8299,-72 131.8299,-108"></polygon>
+<text text-anchor="middle" x="103.3878" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">GRUB</text>
+</g>
+<!-- BIOS&#45;&gt;GRUB -->
+<g id="edge2" class="edge">
+<title>BIOS-&gt;GRUB</title>
+<path fill="none" stroke="#00ff00" d="M103.3878,-143.8314C103.3878,-136.131 103.3878,-126.9743 103.3878,-118.4166"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="106.8879,-118.4132 103.3878,-108.4133 99.8879,-118.4133 106.8879,-118.4132"></polygon>
+</g>
+<!-- Windows -->
+<g id="node4" class="node">
+<title>Windows</title>
+<polygon fill="none" stroke="#000000" points="72.6637,-36 .1119,-36 .1119,0 72.6637,0 72.6637,-36"></polygon>
+<text text-anchor="middle" x="36.3878" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Windows</text>
+</g>
+<!-- GRUB&#45;&gt;Windows -->
+<g id="edge3" class="edge">
+<title>GRUB-&gt;Windows</title>
+<path fill="none" stroke="#00ff00" d="M86.4809,-71.8314C78.6065,-63.3694 69.0958,-53.1489 60.4865,-43.8971"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="62.897,-41.3497 53.5224,-36.4133 57.7725,-46.1183 62.897,-41.3497"></polygon>
+</g>
+<!-- Linux -->
+<g id="node5" class="node">
+<title>Linux</title>
+<polygon fill="none" stroke="#000000" points="198.3878,-36 144.3878,-36 144.3878,0 198.3878,0 198.3878,-36"></polygon>
+<text text-anchor="middle" x="171.3878" y="-13.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">Linux</text>
+</g>
+<!-- GRUB&#45;&gt;Linux -->
+<g id="edge4" class="edge">
+<title>GRUB-&gt;Linux</title>
+<path fill="none" stroke="#00ff00" d="M120.5471,-71.8314C128.5389,-63.3694 138.1916,-53.1489 146.9294,-43.8971"></path>
+<polygon fill="#00ff00" stroke="#00ff00" points="149.6758,-46.0866 153.9975,-36.4133 144.5867,-41.2802 149.6758,-46.0866"></polygon>
+</g>
+</g>
+</svg>
+</pre><p><em>Séquence de démarrage d’un ordinateur</em></p><div class="alert alert-info">
+<p>En fait, le chargeur d’amorçage fait bien plus que ça: il charge différents programmes nécessaires pour lancer votre OS. C’est pour ça que Windows a aussi son propre chargeur d’amorçage, bien qu’il ne permette pas de choisir quel OS booter, et que les distributions Linux installent systématiquement GRUB, même s’il n’y a pas d’autre OS: le chargeur d’amorçage est <strong>nécessaire</strong>. De manière générale, ce schéma est limité et le processus de boot est plus complexe, mais on s’en contentera ici <img class="emoji" alt=":face_with_monocle:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/face_with_monocle.png"></p>
+</div><p>Pourquoi mentionner le chargeur d’amorçage ici? Parce que généralement, il est installé sur la même partition que votre distro (distribution). Donc si par un bricolage maladroit (genre en copiant/collant une commande sans savoir ce qu’elle fait), vous bousillez votre install, vous ne pourrez plus accéder à Windows non plus, même s’il va très bien. Il est donc de bonne pratique de créer une petite partition en début de disque pour l’installer dessus.</p><h2 id="3…-2…-1…-Dual-Boot"><a class="anchor hidden-xs" href="#3…-2…-1…-Dual-Boot" title="3…-2…-1…-Dual-Boot"><i class="fa fa-link"></i></a>3… 2… 1… Dual Boot!</h2><h3 id="Tant-qu’on-est-sur-Windows…"><a class="anchor hidden-xs" href="#Tant-qu’on-est-sur-Windows…" title="Tant-qu’on-est-sur-Windows…"><i class="fa fa-link"></i></a>Tant qu’on est sur Windows…</h3><h4 id="Le-media-d’installation"><a class="anchor hidden-xs" href="#Le-media-d’installation" title="Le-media-d’installation"><i class="fa fa-link"></i></a>Le media d’installation</h4><p>Ou sur Linux, peu importe, mais avant de se lancer, il vous faudra préparer un <strong>media d’installation</strong> ou <strong>Live CD/USB</strong>. Pour cela vous aurez besoin:</p><ul>
+<li>D’une <strong>clef USB</strong> de minimum 4Go <strong>vierge</strong> (tout les fichiers seront effacés dans le process)</li>
+<li>D’un fichier <strong>.iso</strong> que vous aurez téléchargé sur le site officiel de votre distribution préférée (cf le <a href="https://markdown.data-ensta.fr/s/ypPSr0ZLm#" target="_blank" rel="noopener">tuto</a> sur choisir sa distribution)</li>
+<li>D’un logiciel de <strong>création de média bootable</strong> (Sous Windows, <em><a href="https://www.ventoy.net/en/doc_start.html" target="_blank" rel="noopener">Ventoy</a></em> ou <em><a href="https://rufus.ie/fr/" target="_blank" rel="noopener">Rufus</a></em>, sous Linux, <em>Startup Disk Creator</em> installé par défaut sous Ubuntu, ou <em>Image Writer</em>, à télécharger dans votre logithèque)</li>
+</ul><p>Le process est très simple et généralement assez guidé sur les sites officiels des logiciels de création de média bootable: vous insérez la clef USB, lancez le logiciel, réglez 2 - 3 paramètres si nécessaire, puis lancez l’installation, ça prend quelque minutes , et puis on est partis, votre média est prêt plus vite que vos nouilles instantanées. <img class="emoji" alt=":checkered_flag:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/checkered_flag.png"></p><div class="alert alert-danger">
+<p>Attention à bien sélectionner votre clef USB dans votre logiciel de création de média. Normalement vous ne devriez pas pouvoir écraser votre disque dur avec, mais vous pourriez effacer par inadvertance le contenu d’un autre périphérique branché à votre PC</p>
+</div><div class="alert alert-info">
+<p>Spoiler alert: à DaTA il y a des tonnes de clefs USB déjà toute prêtes <img class="emoji" alt=":floppy_disk:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/floppy_disk.png"></p>
+</div><h4 id="La-partition-windows"><a class="anchor hidden-xs" href="#La-partition-windows" title="La-partition-windows"><i class="fa fa-link"></i></a>La partition windows</h4><p>Une fois votre clef USB prête, il vous faudra libérer de la place pour vos nouvelles partitions. Pour cela, rendez-vous dans l’utilitaire de disque de Windows (<strong>clique droit sur l’icône de menu &gt; gestionnaire de disques</strong>). Vous y verrez votre partition <strong>C:</strong> indiquée, et il vous faudra la réduire d’autant que l’espace que vous voudrez libérer pour votre installation Linux (<strong>clique droit sur la partition &gt; réduire le volume</strong>). Si il refuse de réduire au delà d’un certain seuil alors que vous avez en théorie beaucoup de place disponible, il vous faudra <strong>défragmenter votre disque</strong> avant de recommencer l’opération (Ah, les joies du NTFS…). Si le seuil que vous atteignez maintenant ne vous convient toujours pas, libre à vous de faire votre réduction directement depuis votre live USB, mais il est possible que vous abîmiez quelques fichiers au passage (normalement rien de grave, mais à vos risques et périls)</p><h4 id="Le-BIOS"><a class="anchor hidden-xs" href="#Le-BIOS" title="Le-BIOS"><i class="fa fa-link"></i></a>Le BIOS</h4><p>Si vous avez bien tout suivi au début du tutoriel, rien de bien compliqué: désactivez <em>secure boot</em>, activez le boot sur USB, et bootez sur votre USB avec le mode (Legacy / UEFI) qui convient.</p><h3 id="Et-maintenant-partitionnement"><a class="anchor hidden-xs" href="#Et-maintenant-partitionnement" title="Et-maintenant-partitionnement"><i class="fa fa-link"></i></a>Et maintenant, partitionnement.</h3><p>Une fois que votre BIOS est configuré comme il faut, vous devriez <strong>booter sur votre clef USB</strong>. Mais qu’est-ce que ça veut dire exactement ? Et bien si vous avez bien compris tout ce que j’ai expliqué plus haut, c’est à la fois simple et un petit bijoux de technologie: votre BIOS va envoyer à votre processeur les instructions écrite sur votre clef USB et <strong>booter un OS complet</strong> à partir de celle-ci. Jusqu’au milieu des années 2010, les différentes distributions arrivaient même à faire tenir tout ça sur les 700 Mo d’un CD.</p><p>Et cet OS va avoir deux utilités: d’une, avoir toute les fonctionnalités nécessaires pour se copier et s’installer sur votre disque dur, et d’autre part vous permettre de tester ce dernier avant de vous décider.</p><p>Une fois décidé, les processus d’installation des distributions Linux sont tous plus ou moins identiques et tout à fait instinctifs, à un ou deux détails près, que nous allons détailler ici.</p><p>Maintenant que vous êtes booté sur votre clef USB, ne choisissez pas l’option d’installation, mais l’option d’essai, pour tester la distribution. Là, lancez <strong>GParted</strong> ou l’utilitaire de partitionnement de votre distribution, et vous êtes prêts à faire l’installation la plus propre de votre vie.</p><div class="alert alert-warning">
+<p>La plupart des opérations suivantes peuvent généralement être faites depuis l’installateur de votre distribution, mais il est plus propre de le faire de la façon suivante. Si votre dévolu s’est porté sur <strong>Debian</strong> ou un de ses dérivés directs (comme <strong>Kali</strong>), vous n’aurez pas accès à l’environnement <em>live</em> de test, et serez obligés de partitionner depuis l’installeur. Ou alors il faudra commencer par booter sur une clef <strong>Ubuntu</strong> par exemple, pour préparer votre disque.</p>
+</div><h3 id="Partitionner-son-disque"><a class="anchor hidden-xs" href="#Partitionner-son-disque" title="Partitionner-son-disque"><i class="fa fa-link"></i></a>Partitionner son disque</h3><h4 id="Pour-un-dual-boot"><a class="anchor hidden-xs" href="#Pour-un-dual-boot" title="Pour-un-dual-boot"><i class="fa fa-link"></i></a>Pour un dual boot</h4><p>En avant pour le Dual Boot! Mais maintenant qu’on sait tout ça, comment on procède? Si vous avez bien suivi le tutoriel jusqu’ici, vous devriez voir un layout (affichage) qui ressemble un peu à ça:</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_ffc81c62466c2a1b4b13a95f09e16cb9.png" alt=""></p><p><em>Partitionnement avant l’installation de Linux</em></p><p>Et bien voilà le genre de layout que l’on va vouloir obtenir dans notre cas:</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_c8e11bb47c21932fb6127d849a8c3910.png" alt=""></p><p><em>Layout recherché pour un Dual Boot en GPT</em></p><div class="alert alert-info">
+<p>Il est probable que vous ayez deux ou trois partitions Windows au lieu d’une. Si vous êtes en GPT, ce n’est pas un problème. En MBR, vous allez devoir faire des choix. Je vous suggère de privilégier la partition root (obligatoire) s’il ne reste qu’une partition primaire à créer, et le swap s’il y en a deux. S’il y en a trois, créez une partition logique avec la partition root et la partition home, puis un swap et le boot.</p>
+</div><p>En MBR, voilà ce que vous allez chercher à faire:</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_fc02c984e4dd50392a673f776a429212.png" alt=""></p><p><em>Layout recherché pour un Dual Boot en MBR</em></p><p>Les noms sont assez explicites, mais nous allons les détailler ensemble.</p><ul>
+<li>Tout d’abord, une partition de boot, de 512 Mo, c’est largement suffisant, sur laquelle nous allons installer le chargeur d’amorçage. Elle <strong>doit</strong> être en <em>fat32</em> pour fonctionner.</li>
+<li>Une partition root, sur laquelle nous allons installer notre distribution et nos logiciels. Vous pouvez lui donner la taille et le format que vous souhaitez, mais je recommande de ne pas descendre en dessous de 20 Go, 50Go étant confortables. Je ne saurais que vous recommander le <em>ext4</em> pour une partition Linux, mais libre à vous.</li>
+<li>Une partition home, sur laquelle nous allons mettre nos fichiers personnels. Si vous êtes amateur de séries et de films, je vous suggère d’y mettre directement plusieurs centaines de Go, ils seront vite remplis. Pour le format, je vous suggère <em>ext4</em> car il comporte de nombreux avantages. Mais si vous voulez pouvoir y accéder depuis Windows, le <em>ntfs</em> sera votre choix, bien que je ne le recommande pas.</li>
+<li>Enfin une partition swap, surtout si vous avez un HDD et 8Go de RAM ou moins. En ce cas, mettez autant de <em>swap</em> que vous avez de RAM.</li>
+</ul><div class="alert alert-danger">
+<p>Réfléchissez bien à la <strong>taille</strong> que vous voulez donner à vos partitions, car si elles sont en théorie toujours modifiables après coup, en pratique <strong>vous risquez de perdre des données</strong> et autres petits ennuis.</p>
+</div><div class="alert alert-info">
+<p>L’idéal est de mettre le boot au tout début du disque, et le swap à la toute fin. Cependant, Windows occupe généralement tout le début du disque, et s’il est facile de déplacer la <strong>fin</strong> d’une partition, en déplacer le <strong>début</strong> est très laborieux et sujet à des pertes de données: il faut déplacer tout les bits un à un d’un point à un autre de votre disque. C’est très long, et surtout, pas question de l’interrompre: vous perdriez quantité de données. Donc ne le faites que si vous êtes sûrs de vous.</p>
+</div><div class="alert alert-success">
+<p>Je ne peux vraiment pas accéder à du <em>ext4</em> depuis Windows? Alors vous y arriverez <strong>peut être</strong> avec le projet <a href="https://en.wikipedia.org/wiki/Ext2Fsd" target="_blank" rel="noopener">Ext2Fsd</a>, mais si c’était un remède miracle, ça se saurait…</p>
+</div><h4 id="Pour-une-installation-de-Linux-seul"><a class="anchor hidden-xs" href="#Pour-une-installation-de-Linux-seul" title="Pour-une-installation-de-Linux-seul"><i class="fa fa-link"></i></a>Pour une installation de Linux seul</h4><p>Lorsqu’on fait une installation de Linux seule sur son disque dur, voici le genre de layout que l’on va viser:</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_dcd266c84390769def3cc2d5aab0b2eb.png" alt=""></p><p><em>Le layout classique d’une installation Linux</em></p><p>Il est identique au layout précédent, à ceci près que l’on a pu ici mettre le boot au début et le swap à la fin.</p><div class="alert alert-danger">
+<p>N’oubliez pas de cliquer sur <strong>Appliquer toutes les modifications</strong> après avoir préparé votre layout dans GParted. En effet, il ne modifie pas votre table de partition en live (vous imaginez le bordel?), il faut donc valider les changements pour les appliquer.</p>
+</div><hr><p>Maintenant que votre disque est prêt, on peut reprendre notre installation. Les étapes s’enchaînent bien, jusqu’à ce que votre distribution vous demande le type d’installation que vous souhaitez. Le partitionnement manuel sera généralement sous le nom <em>autre</em> ou <em>personnalisé</em>.</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_21f89b22156a3e7cc08e2370280ec31b.png" alt=""></p><p><em>Type d’installation sous Ubuntu</em></p><p>Vous arrivez alors sur une fenêtre qui vous liste l’ensemble des partitions:</p><p><img src="https://markdown.data-ensta.fr/uploads/upload_9f625f70e99ba02ea9dbbd076a778ae0.png" alt=""></p><p><em>Liste des partitions que l’on a préparé</em></p><p>On les identifie facilement. On va commencer par changer le <em>périphérique où sera installé le programme de démarrage</em> à notre partition de boot, ici <em>/dev/sda4</em>. Puis on va venir sélectionner chacune des partitions, cliquer sur <em>modifier</em>, et lui attribuer les propriétés souhaitées:</p><center>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Utiliser comme</th>
+<th>Point de montage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/dev/sda2</td>
+<td>Système de fichers journalisés ext4</td>
+<td>/</td>
+</tr>
+<tr>
+<td>/dev/sda3</td>
+<td>Système de fichers journalisés ext4</td>
+<td>/home</td>
+</tr>
+<tr>
+<td>/dev/sda5</td>
+<td>Espace d’échange (“swap”)</td>
+<td></td>
+</tr>
+<tr>
+<td>/dev/sda4</td>
+<td>Zone réservée pour le chargeur d’amorçage BIOS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</center><p><img src="https://markdown.data-ensta.fr/uploads/upload_d682a6b9a2591270151a158518431d47.png" alt=""></p><p>Voilà à peu près ce que vous devriez obtenir, à adapter en fonction du nom de vos partitions évidemment.</p><div class="alert alert-success">
+<p>Il est à noter que les partitions ne sont pas nécessairement sur le même disque! C’est même recommandé lorsque vous possédez un petit SSD et un gros HDD: installez votre partition <em>root</em> sur votre SSD, pour que tout vos programmes démarrent rapidement, et votre partition <em>home</em> sur votre HDD pour avoir plein de place pour vos films, jeux et autre</p>
+</div><hr><p>Voilà! Votre Dual Boot est fait.</p><h2 id="Pourquoi-avoir-fait-un-tuto-aussi-long-juste-pour-ça"><a class="anchor hidden-xs" href="#Pourquoi-avoir-fait-un-tuto-aussi-long-juste-pour-ça" title="Pourquoi-avoir-fait-un-tuto-aussi-long-juste-pour-ça"><i class="fa fa-link"></i></a>Pourquoi avoir fait un tuto aussi long juste pour ça?</h2><p>Si on avait voulu juste apprendre à faire bêtement un Dual Boot, booter l’USB et cliquer sur <em>Suivant</em> sans réfléchir aurait suffit. Et c’est d’ailleur admirable qu’on arrive à simplifier le processus d’une distro à ce point. Mais en faisant tout ce que l’on a écrit ci-dessus, avec un peu de chance, vous aurez appris de nouvelles choses sur le fonctionnement d’un ordinateur et de Linux, et peut être même que vous aurez compris ce que vous avez fait. Alors, l’objectif est atteint. Parce que la philosophie de Linux, c’est pas de l’utiliser, c’est de le comprendre.</p><hr></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Dual-Boot-like-a-pro" title="Dual Boot like a pro!">Dual Boot like a pro!</a><ul class="nav">
+<li><a href="#Avant-le-Dual-Boot…-Le-Boot" title="Avant le Dual Boot… Le Boot">Avant le Dual Boot… Le Boot</a><ul class="nav">
+<li><a href="#Commençons-par-un-peu-de-vocabulaire" title="Commençons par un peu de vocabulaire">Commençons par un peu de vocabulaire</a></li>
+<li><a href="#Mais-qu’est-ce-que-c’est-un-Dual-Boot-alors" title="Mais qu’est-ce que c’est un Dual Boot alors?">Mais qu’est-ce que c’est un Dual Boot alors?</a></li>
+</ul>
+</li>
+<li><a href="#Le-BIOS-et-le-choix-des-périphériques" title="Le BIOS et le choix des périphériques">Le BIOS et le choix des périphériques</a><ul class="nav">
+<li><a href="#Les-priorités-de-boot" title="Les priorités de boot">Les priorités de boot</a></li>
+<li><a href="#Le-secure-boot" title="Le secure boot">Le secure boot</a></li>
+<li><a href="#Les-options-concernant-l’USB" title="Les options concernant l’USB">Les options concernant l’USB</a></li>
+<li><a href="#Le-Legacy-et-le-UEFI" title="Le Legacy et le UEFI">Le Legacy et le UEFI</a></li>
+<li><a href="#Et-enfin-le-boot" title="Et enfin: le boot">Et enfin: le boot</a></li>
+</ul>
+</li>
+<li><a href="#Partitionnement-File-System-et-Chargeur-d’amorçage" title="Partitionnement, File System et Chargeur d’amorçage.">Partitionnement, File System et Chargeur d’amorçage.</a><ul class="nav">
+<li><a href="#Mais-pourquoi-partitionner" title="Mais pourquoi partitionner?">Mais pourquoi partitionner?</a></li>
+<li><a href="#Les-formats-de-système-de-fichier" title="Les formats de système de fichier">Les formats de système de fichier</a></li>
+<li><a href="#Le-chargeur-d’amorçage" title="Le chargeur d’amorçage">Le chargeur d’amorçage</a></li>
+</ul>
+</li>
+<li><a href="#3…-2…-1…-Dual-Boot" title="3… 2… 1… Dual Boot!">3… 2… 1… Dual Boot!</a><ul class="nav">
+<li><a href="#Tant-qu’on-est-sur-Windows…" title="Tant qu’on est sur Windows…">Tant qu’on est sur Windows…</a></li>
+<li><a href="#Et-maintenant-partitionnement" title="Et maintenant, partitionnement.">Et maintenant, partitionnement.</a></li>
+<li><a href="#Partitionner-son-disque" title="Partitionner son disque">Partitionner son disque</a></li>
+</ul>
+</li>
+<li><a href="#Pourquoi-avoir-fait-un-tuto-aussi-long-juste-pour-ça" title="Pourquoi avoir fait un tuto aussi long juste pour ça?">Pourquoi avoir fait un tuto aussi long juste pour ça?</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Dual-Boot-like-a-pro" title="Dual Boot like a pro!">Dual Boot like a pro!</a><ul class="nav">
+<li><a href="#Avant-le-Dual-Boot…-Le-Boot" title="Avant le Dual Boot… Le Boot">Avant le Dual Boot… Le Boot</a><ul class="nav">
+<li><a href="#Commençons-par-un-peu-de-vocabulaire" title="Commençons par un peu de vocabulaire">Commençons par un peu de vocabulaire</a></li>
+<li><a href="#Mais-qu’est-ce-que-c’est-un-Dual-Boot-alors" title="Mais qu’est-ce que c’est un Dual Boot alors?">Mais qu’est-ce que c’est un Dual Boot alors?</a></li>
+</ul>
+</li>
+<li><a href="#Le-BIOS-et-le-choix-des-périphériques" title="Le BIOS et le choix des périphériques">Le BIOS et le choix des périphériques</a><ul class="nav">
+<li><a href="#Les-priorités-de-boot" title="Les priorités de boot">Les priorités de boot</a></li>
+<li><a href="#Le-secure-boot" title="Le secure boot">Le secure boot</a></li>
+<li><a href="#Les-options-concernant-l’USB" title="Les options concernant l’USB">Les options concernant l’USB</a></li>
+<li><a href="#Le-Legacy-et-le-UEFI" title="Le Legacy et le UEFI">Le Legacy et le UEFI</a></li>
+<li><a href="#Et-enfin-le-boot" title="Et enfin: le boot">Et enfin: le boot</a></li>
+</ul>
+</li>
+<li><a href="#Partitionnement-File-System-et-Chargeur-d’amorçage" title="Partitionnement, File System et Chargeur d’amorçage.">Partitionnement, File System et Chargeur d’amorçage.</a><ul class="nav">
+<li><a href="#Mais-pourquoi-partitionner" title="Mais pourquoi partitionner?">Mais pourquoi partitionner?</a></li>
+<li><a href="#Les-formats-de-système-de-fichier" title="Les formats de système de fichier">Les formats de système de fichier</a></li>
+<li><a href="#Le-chargeur-d’amorçage" title="Le chargeur d’amorçage">Le chargeur d’amorçage</a></li>
+</ul>
+</li>
+<li><a href="#3…-2…-1…-Dual-Boot" title="3… 2… 1… Dual Boot!">3… 2… 1… Dual Boot!</a><ul class="nav">
+<li><a href="#Tant-qu’on-est-sur-Windows…" title="Tant qu’on est sur Windows…">Tant qu’on est sur Windows…</a></li>
+<li><a href="#Et-maintenant-partitionnement" title="Et maintenant, partitionnement.">Et maintenant, partitionnement.</a></li>
+<li><a href="#Partitionner-son-disque" title="Partitionner son disque">Partitionner son disque</a></li>
+</ul>
+</li>
+<li><a href="#Pourquoi-avoir-fait-un-tuto-aussi-long-juste-pour-ça" title="Pourquoi avoir fait un tuto aussi long juste pour ça?">Pourquoi avoir fait un tuto aussi long juste pour ça?</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha256-kJrlY+s09+QoWjpkOrXXwhxeaoDz9FW5SaxF8I0DibQ=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
